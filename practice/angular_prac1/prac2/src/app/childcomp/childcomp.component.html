@@ -1,0 +1,15 @@
+<p>childcomp works!</p>
+
+
+<br>
+
+<h3>Data received from Parent using @Input decorator</h3>
+
+<h3>{{data_from_parent}}</h3>
+
+
+<br>
+<input type="text" #box>
+
+
+<button (click)="childData.emit(box.value)">Send data to parent</button>

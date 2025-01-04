@@ -1,0 +1,197 @@
+
+
+/* Split the screen in half */
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+  /* background-image: url('src/assets/img/sm1.jpg'); */
+   
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+  
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    /* background-image: url('src/assets/img/sm1.jpg');
+  background-size: cover;
+ 
+  overflow: hidden; */
+   
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  
+
+  .score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px; /* Adjust as needed */
+  }
+  
+  .score-circle {
+    width: 70px; /* Diameter of the circle */
+    height: 70px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes it a circle */
+    border-color: #333;
+    border-width: 1px;
+    background: #14a787; /* Default background color */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+    border: 2px solid #ccc; /* Optional: Adds border */
+  }
+  
+  .score-text {
+    z-index: 2; /* Ensures text is above background */
+  }
+
+  /* Styles for pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+}
+
+.pagination-controls button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pagination-controls button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination-controls button.active:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* table */
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529; /* Text color */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6; /* Border color */
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; /* Header bottom border */
+  background-color: #f8f9fa; /* Header background color */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075); /* Hover background color */
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6; /* Table border */
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6; /* Cell borders */
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 123, 255, 0.1); /* Active row background color */
+}
+
+/* Customize table cell padding or spacing as needed */
+.table th,
+.table td {
+  padding: 0.75rem;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* card */
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #28a745; /* Green background color */
+  border-bottom: none; /* Remove bottom border */
+  border-radius: 10px 10px 0 0; /* Rounded corners on top */
+ 
+}
+
+
+.cursor{
+  cursor: pointer;
+}

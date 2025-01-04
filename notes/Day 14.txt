@@ -1,0 +1,336 @@
+[Thursday 9:48 AM] Vipul Kumar Jha
+child.component.ts
+ 
+ 
+import { AfterContentChecked, AfterContentInit, Component, ContentChild, ContentChildren, ElementRef, OnInit } from '@angular/core';
+ 
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent implements OnInit, AfterContentInit, AfterContentChecked {
+  @ContentChild('prop') xyz: ElementRef;
+  @ContentChildren('prop') abc: ElementRef[];
+  constructor() { }
+  ngAfterContentInit(): void {
+    console.log("AfterContentInit")
+  }
+ 
+  ngAfterContentChecked(): void {
+    // console.log("AfterContentChecked")
+    console.log(this.xyz?.nativeElement);
+    for (let i of this.abc) {
+      console.log(i.nativeElement);
+    }
+ 
+  }
+  ngOnInit(): void {
+  }
+ 
+}
+[Thursday 9:49 AM] Vipul Kumar Jha
+<!-- child.component.html -->
+<p>child works!</p>
+<ng-content></ng-content>
+[Thursday 9:50 AM] Vipul Kumar Jha
+<!-- parent.component.html -->
+<p>parent works!</p>
+<app-child>
+    <h1 #prop>Hii this is content from parent using content projection</h1>
+    <h2 #prop> Hii this is second content from parent</h2>
+</app-child>
+
+____________________________
+
+SUMMARY
+ 
+1) ngOnChanges -- 1.part of change detection and runs on every @Input() 
+		property change
+	       2.But it works fine for primitive type but for complex
+		types if address is same, it will not run
+ 
+2) ngOnInIt   --  It runs one time in complete lifecycle of component
+ 
+3) ngDoCheck  --  It runs all the time in all situations.
+ 
+4) ngAfterContentInIt -- This runs one time only and capture content 
+			projection elements.
+ 
+5) ngAfterContentChecked -- This runs everytime when content projection 
+			 changes, so that we capture content projection	
+			elements by @ContentChild, @ContentChildren
+ 
+6) ngAfterViewInIt -- This runs one time only after complete initialization
+		    of view(html) is done.
+ 
+7) ngAfterViewChecked -- This runs everytime when changes happen in view.
+ 
+8) ngOnDestroy -- This runs when the component is destroyed.
+ 
+ 
+* Multiple ways component can be destroyed:
+ 
+1.When you destroy the application.
+ 
+2.When you unload your component.
+ 
+etc.
+ 
+ 
+Why we use ngOnDestroy?
+ 
+1.To prevent the memory leak.
+ 
+2.To Unsubscribe observable objects.
+ 
+3.TimeIntervals SetInterval etc.
+
+___________________________
+
+child.component.ts -------->
+ 
+export class ChildComponent implements OnDestroy{
+ 
+  inc=0;
+  count=0;
+  time:any;
+ 
+  fun(){
+    this.inc++;
+  }
+ 
+  ngOnInit(): void {
+    this.Timer();
+  }
+ 
+  ngOnDestroy(): void {
+    console.log('child comp destroyed');
+ 
+    clearInterval(this.time);
+  }
+ 
+  Timer():void{
+    this.time =setInterval(()=>{
+      this.count++;
+      console.log(this.count);
+    },1000)
+  }
+ 
+}
+ 
+------------------------------------------
+ 
+child.component.html ------>
+ 
+ 
+<button (click)="fun()">click me {{inc}}</button>
+ 
+------------------------------------------
+ 
+app.component.html ----->
+ 
+ 
+<button (click)="onBClick()" #ele>click me</button>
+ 
+<button (click)="showHide()">show/hide</button>
+ 
+<app-child *ngIf="isDestroy"></app-child>
+ 
+ 
+-------------------------------------------
+ 
+app.component.ts ------>
+export class AppComponent implements OnInit,AfterViewInit,AfterViewChecked,OnDestroy{
+  title = 'hooksApp';
+ 
+  count:number =0;
+ 
+  @ViewChild('ele') obj:ElementRef;
+ 
+  @ViewChild(ChildComponent) cobj:ChildComponent;
+ 
+  isDestroy=true;
+ 
+  onBClick(){
+    this.count++;
+  }
+ 
+  ngOnInit(): void {
+    console.log('ngOnInIt',this.obj);
+  }
+ 
+  ngAfterViewInit(): void {
+    console.log('ngVIEWInIt',this.obj);
+ 
+    this.obj.nativeElement.innerHTML = 'dynamic change';
+  }
+ 
+  ngAfterViewChecked(): void {
+    console.log('afterviewcheck',this.cobj.inc);
+  }
+  showHide(){
+    this.isDestroy =!this.isDestroy;
+  }
+ 
+  ngOnDestroy(): void {
+  }
+ 
+ 
+}
+_________________________________
+[Thursday 1:09 PM] Abhishek Jat
+Readme.txt
+ 
+Angular Forms
+
+1.Angular form is a main way to communicate with user and we call it as UI
+
+2. We collect the data from user and respond to user.
+
+3. Angular forms can be simple and complex.
+
+4. Expectations from angular forms:
+
+    1. Initialize the form fields and display to user.
+
+    2. Capture the data from user.
+
+    3. Track the changes append in the field. example: ngForm and ngModel directives
+
+    4. Validation
+
+    5. Validation error messages.
+ 
+5. We have two approaches to develop angular forms.
+
+    1. Template driven (Old approach of angular js(Angular 1). Angular 1 /Angular js is based on MVC pattern)
+
+    2. Reactive forms or model driven approach(New approach of Angular 2 onwards are based on component based pattern)
+ 
+                Template Driven Approach
+ 
+1. This is Old approach of Angular js.
+
+2. Two way binding with ngModel.
+
+3. Here we do all our work in HTML and less work on code.
+
+4. Automatic traking of state and validation by ngForm and ngModel directives.
+
+5. Good for simple forms.
+ 
+                        Summary of Project:
+ 
+1. Generate new CLI project -- Already done.
+
+2. Add the form Html.
+
+    1.Add bootstape CDN in index.html.
+
+3. Data Binding.
+
+4. Tracking of state and validation.
+
+5. Visual validation.
+
+6. Displaying error messages.
+
+7. Data submit to server.
+ 
+ 
+Track state and validity:
+
+1. The control is visited then class ng-touched = true and ng-untouched = false
+ 
+2. The control value is changed then class ng-dirty= true and ng-prestine = false
+ 
+3. The control value is valid then class ng-valid = true and ng-invalid = false
+ 
+        
+
+                    ngModel properties:
+ 
+Class ng-untouched : untouched
+ 
+Class ng-touched : touched
+ 
+Class ng-pristine : pristine
+ 
+Class ng-dirty : dirty
+ 
+Class ng-valid : valid
+ 
+Class ng invalid : invalid
+
+[Thursday 1:09 PM] Abhishek Jat
+Register.Component.html
+ 
+<div class="container-fluid">
+    <h1>Registration Form</h1>
+    <form #userForm="ngForm">
+        {{userForm.value| json}}
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" ngModel name="uname">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" ngModel name="ename">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" ngModel name="pname">
+        </div>
+        <div class="form-group">
+            <select class="custom-select" ngModel name="sname">
+                <option selected>Select Course</option>
+                <option *ngFor="let i of sub">
+                    {{i}}
+                </option>
+            </select>
+           
+        </div>
+        <div ngModelGroup="address">
+            <div class="form-group">
+                <label>Street</label>
+                <input type="tel" class="form-control" ngModel name="staddress">
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="tel" class="form-control" ngModel name="ctaddress">
+            </div>
+        </div>
+        <button class="btn btn-primary">Submit Form</button>
+    </form>
+ 
+</div>
+____________
+import { Component } from '@angular/core';
+ 
+@Component({
+  selector: 'app-Register',
+  templateUrl: './Register.Component.html'
+})
+export class RegisterComponent {
+//   title = 'AngularProjectDesign';
+ 
+    sub = ["Angular", "React", "C#", "DotNet"];
+}
+ 
+ ______________
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

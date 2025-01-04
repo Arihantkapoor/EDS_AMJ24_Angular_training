@@ -1,0 +1,262 @@
+Day 12 - 29 April
+
+1. Aastik Demo - Dynamically adding and removing elements in array (in ul)
+________________________________________________
+	app.component.ts
+________________________________________________
+export class AppComponent {
+      items : {[key:string] : string[]} ={
+        "fruits" :[],
+        "vegetables" :[],
+        "groceries" : []
+      }
+ 
+      newElement : string = "";
+      chosenkey : string = "";
+ 
+      objectKeys(obj : object){
+        return Object.keys(obj);
+      }
+ 
+      addElement (element : string,key : string){
+        this.items[key].push(element);
+        this.newElement = '';
+      }
+ 
+      removeElement(index : number,key:string){
+        this.items[key].splice(index,1);
+      }
+ 
+      updateElement(index:number,key:string,newElement:string){
+        this.items[key][index] = newElement;
+      }
+}
+
+______________________________________________
+	app.component.html
+______________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h2>What do u want to add?</h2>
+    <input type="radio" [(ngModel)] = "chosenkey" value = "fruits">Fruits
+    <input type="radio" [(ngModel)] = "chosenkey" value = "vegetables">Vegetables
+    <input type="radio" [(ngModel)] = "chosenkey" value = "groceries">Groceries
+    <br>
+    <input  [(ngModel)]="newElement" placeholder="New {{chosenkey}}" >
+    <button (click)="addElement(newElement,chosenkey)">Add Element</button>
+  </div>
+ 
+  <div *ngFor="let key of objectKeys(items)">
+  {{key}}
+ 
+  <ul>
+    <li *ngFor="let itm of items[key];let i = index">
+    {{itm}}
+    <button (click)="removeElement(i,key)"> Remove Element</button>
+    <button (click)="updateElement(i,key,newElement)">Update Element</button>
+    </li>
+  </ul>
+  </div>
+</body>
+</html>
+
+_________________________________________________________________________
+Component Communication
+ 
+Parent to Child by Input Property :-
+ 
+Child to Parent Communication we can do by three ways
+ 
+1.By Output Property and Event Emitter it generates the custom event from child to pass data
+to parent
+ 
+2.By Local Reference Variable
+ 
+3.@View Child Property
+
+___________________________________________________________________________
+ Child to parent communication using @Output and custom event binding Steps
+___________________________________________________________________________
+ 
+1. create object of EventEmitter in child ts file
+	  @Output() changeevent:EventEmitter<string>=new EventEmitter();
+ 
+ 
+2. add child tag <app-child> in parent html file
+ 
+3.In parent html file, Bind child tag with event of child i.e, changeevent with function userdata() present in parent ts file
+ 
+	<app-child2 (changeevent)="userdata($event)"></app-child2>
+ 
+ 
+	In parent ts file----
+ 
+	data='';
+	userdata(item:string){
+		this.data=item;
+	}
+ 
+4. In child html file, create a click event, It will send data in #box textbox to parent html (when button is clicked and changeevent event will emit)
+ 
+	<input type="text" #box>
+ 
+	<button (click)="changeevent.emit(box.value)">click</button>
+
+________________________________________________________________________________________
+Child to Parent communication using local variable
+________________________________________________________________________________________
+child.component.ts :-
+
+import { Component } from '@angular/core';
+ 
+@Component({
+  selector: 'app-childcomp2',
+  templateUrl: './childcomp2.component.html',
+  styleUrls: ['./childcomp2.component.css']
+})
+export class Childcomp2Component {
+  data: string = 'child to parent';
+}
+
+parent.component.html :-
+
+<p>parentcomp2 works!</p>
+<app-childcomp2 #child></app-childcomp2>
+ 
+Data from child: {{child.data}}
+
+_____________________________________________________________________________________________
+Child to Parent communication using @ViewChild
+_____________________________________________________________________________________________
+child.component.ts :-
+
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-childcomp3',
+  templateUrl: './childcomp3.component.html',
+  styleUrls: ['./childcomp3.component.css']
+})
+export class Childcomp3Component {
+  data: string = "data from child";
+}
+
+parent.component.ts :-
+
+import { Component, ViewChild } from '@angular/core';
+import { Childcomp3Component } from '../childcomp3/childcomp3.component'
+@Component({
+  selector: 'app-parentcomp3',
+  templateUrl: './parentcomp3.component.html',
+  styleUrls: ['./parentcomp3.component.css']
+})
+export class Parentcomp3Component {
+  @ViewChild(Childcomp3Component) obj?: Childcomp3Component;
+}
+
+parent.component.html :-
+                                                                                                                                                                       
+<p>parentcomp3 works!</p>
+<app-childcomp3></app-childcomp3>
+Data from Child component through viewchild
+{{obj?.data}}
+
+____________________________________________________________________
+Component life cycle hooks
+ 
+When you start calling component by selector here at this point your component
+is instantiate and it's lifecylce starts.
+ 
+Component lifecycle is having 8 stages
+ 
+1. ngOnChanges
+2. ngOnInit
+3. ngDoCheck
+   4. ngAfterContentInit
+   5. ngAfterContentChecked
+   6. ngAfterViewInit
+   7. ngAfterViewChecked
+8. ngOnDestroy
+ 
+These functions belongs to interfaces, so if you want to use these functions
+you have to implement interface and naming convention is if the function name
+is ngOnChanges its interface name is OnChanges.
+ 
+eg. function name ngOnInit interface name OnInit
+eg. function name ngDoCheck interface name DoCheck
+ 
+ngOnChanges - will be fired on everytime @Input property changes
+ 
+______________________________________________________________________
+
+Example:-
+
+	child.component.ts
+
+export class ChildComponent implements OnChanges{
+constructor()
+{
+  console.log("I am child constructor")
+}
+
+  ngOnChanges(changes: SimpleChanges): void {
+ console.log(changes);
+}
+@Input() n1:number=0
+@Input() checktrue:boolean=true;
+}
+
+	child.component.html
+
+I am input property n1: {{n1}}
+
+ _______________________________
+	parent.component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent {
+  constructor()
+  {
+    console.log("I am Parent constructor")
+  }
+dynamicFunc() {
+this.count++;
+this.checkTnF = !this.checkTnF;
+}
+data:number=599;
+count:number=0;
+checkTnF:boolean=false;
+}
+
+	parent.component.html
+
+<button (click)="dynamicFunc()">Count</button>
+<app-child [n1]="count" [checktrue]="checkTnF"></app-child>
+<!-- data -> parent to child -->
+
+_________________________________
+Order of evaluation :- 
+
+Parent constructor
+Child constructor
+ngOnChanges (if any Input property exists)
+ngOnInit (initialization)
+
+
+
+
+
+
+ 

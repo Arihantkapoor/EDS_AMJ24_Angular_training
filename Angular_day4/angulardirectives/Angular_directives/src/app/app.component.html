@@ -1,0 +1,88 @@
+<!-- <h1>Two way binding by ngModel</h1>
+<input [(ngModel)] = "data" >
+
+<br>
+Name : {{data}}
+
+
+<hr>
+<br>
+<h1>Two way binding by ngModelChange</h1>
+
+Name: <input type="text" name="name" ngModel (ngModelChange)="ngNameChanged($event)">
+<br>
+
+<hr>
+<br>
+
+<h1>Two way binding by DOM Changed</h1>
+Name: <input type="text" name="name1" (change)="domNameChanged($event)" >
+
+
+<br>
+<br>
+
+{{search}}
+
+
+
+<hr>
+<br>
+<br> -->
+
+
+<h1>Directives Demo</h1>
+
+
+<input type="radio" (click)="changeValue(true)" name="checkbox">True
+<input type="radio" (click)="changeValue(false)" name="checkbox">False
+
+
+
+<div *ngIf="isValid; then data1 else data2">I am valid</div>
+
+<ng-template #data1>
+  <div>I am in then block</div>
+  <button class="btn btn-success">Then block</button>
+</ng-template>
+
+<ng-template #data2>
+  <div>I am in else block</div>
+  <button class="btn btn-danger">Else block</button>
+</ng-template>
+
+<!-- <div *ngIf="isValid; else data1">I am valid
+</div> -->
+
+<!-- <ng-template #data1>
+  <div>I am not a valid data </div>
+</ng-template>
+
+
+<button [disabled]="isValid">{{isValid}}</button>
+
+<br>
+<hr>
+<br> -->
+
+<!--
+<button class="btn btn-success" *ngIf="isValid; else data2">Add to Cart</button>
+
+<ng-template #data2> 
+  <button class="btn btn-succes">Add to Cart Not Availabe</button>
+</ng-template>
+-->
+
+<hr>
+<br>
+<h1>ngSwitch demo</h1>
+
+<br>
+Enter Number : <input type="text" #txt (keyup)="0">
+<br>
+<div [ngSwitch] = "txt.value">
+<div *ngSwitchCase="100"><h1>Hello</h1></div>
+<div *ngSwitchCase="101"><h1>namaste</h1></div>
+<div *ngSwitchCase="102"><h1>privet</h1></div>
+<div *ngSwitchDefault>Default value</div>
+</div>

@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <h1>Registration Form</h1>
+
+    <form #userform = "ngForm" (ngSubmit)="onSubmit(userform)">
+
+
+       <h2>Form level Validation: {{userform.form.valid}}</h2> 
+
+        <br>
+
+        {{userform.value|json}}
+
+        <br>
+
+        {{UserModel | json}}
+        <br>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input required type="text"
+             class="form-control"
+             [(ngModel)] = "UserModel.name"
+             name="uname" #uname = "ngModel"
+             [class.is-invalid] = "uname.invalid && uname.touched">
+             <small class="text-danger" 
+             [class.d-none] = "uname.valid || uname.untouched"
+             >Name is required</small>
+        </div>
+        <!-- <h2>{{uname.className}}</h2> -->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" [(ngModel)]="UserModel.email" name="email">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" 
+            pattern="^\d{10}" required
+            [class.is-invalid] = "phone.invalid && phone.touched"
+            [(ngModel)]="UserModel.phoneNumber" name = "phone" #phone = "ngModel">
+            <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+                <small class="text-danger"
+                *ngIf="phone.errors['required']"
+                >Phone Number is required</small>
+                <small class="text-danger"
+                *ngIf="phone.errors['pattern']"
+                >Phone Number must be of 10 digits</small>
+            </div>
+            <small class="text-danger" 
+            [class.d-none] = "phone.valid || phone.untouched"
+            >Phone number is required of 10 digits</small>
+        </div>
+        <div class="form-group">
+            <select (blur)="validate(course.value)" 
+            (change)="validate(course.value)" 
+            class="custom-select form-control" 
+            [class.is-invalid]="courseError && course.touched" 
+            [(ngModel)]="UserModel.course" name="course" #course="ngModel" required>
+                <option value="default" >Select course</option>
+                <option *ngFor="let i of courses">
+                    {{i}}
+                </option>
+            </select>
+            <small class="text-danger" [class.d-none]="!courseError || course.untouched">Course is required</small>
+        </div>
+
+        <!-- <div ngModelGroup = "address">
+            <div class="form-group">
+                <label>Street</label>
+                <input type="text" class="form-control" ngModel name="streetAddress">
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" class="form-control" ngModel name="cityAddress">
+            </div>
+        </div> -->
+
+        <button class="btn btn-primary" [disabled] = "courseError || userform.form.invalid"> Submit Form </button>
+    </form>
+</div>

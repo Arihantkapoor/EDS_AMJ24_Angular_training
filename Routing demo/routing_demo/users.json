@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "john",
+            "age":22
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",            
+            "age":24
+
+        },
+        {
+            "id": 3,
+            "name": "Bob Johnson",
+            "age" : 34
+        }
+    ]
+}

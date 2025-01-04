@@ -1,0 +1,14 @@
+<div class="container">
+
+  <form [formGroup]="userform">
+
+    <div class="form-group">
+      <label>Enter your number</label>
+      <input type="number" class="form-control" formControlName="userInput">
+      <small class="text-danger" *ngIf="userform.get('userInput')?.errors?.notmatched && userform.get('userInput')?.touched">
+        Number entered is less than 10
+      </small>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,19 @@
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+
+  <tr *ngFor="let items of details">
+    <td>{{items.id}}</td>
+    <td>{{items.name}}</td>
+    <td>{{items.salary}}</td>
+  </tr>
+</table>
+
+
+<button (click)="showdata()">Display data</button>
+
+
+<app-mycomp></app-mycomp>

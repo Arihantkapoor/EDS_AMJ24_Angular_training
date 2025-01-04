@@ -1,0 +1,15 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let user of userList">
+    <td>{{user.id}}</td>
+    <td>
+      <!-- <a routerLink="detail/{{user.id}}">{{user.name}}</a> -->
+      <a [routerLink]="'detail/' + user.id">{{user.name}}</a>
+    </td>
+    <td>{{user.email}}</td>
+  </tr>
+</table>

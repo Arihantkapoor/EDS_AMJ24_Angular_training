@@ -1,0 +1,325 @@
+OnDestroy lifecycle hook 
+------------------------------------------------------------
+PARENT.TS
+------------------------------------------------------------
+export class AppComponent {
+  toDestroy=true; //initializing property to true.
+ 
+ 
+  showHide(){
+   this.toDestroy = !this.toDestroy;
+  }
+}
+ 
+ 
+--------------------------------------------------------------
+PARENT.HTML
+--------------------------------------------------------------
+<app-child-component *ngIf="toDestroy"></app-child-component>
+<button (click)="showHide()">show/Hide</button>
+ 
+ 
+-----------------------------------------------------------------
+CHILD.TS
+-----------------------------------------------------------------
+export class ChildComponentComponent implements OnInit,OnDestroy{    // implementing the methods of lifecycle hooks
+ 
+ 
+  num=0;          // used for setInterval function for iteration
+  time:any;        // used for setInterval function
+ 
+ 
+  ngOnDestroy(): void {
+   console.log("ondestroy of childcomponent is called");
+   clearInterval(this.time); 
+  }
+
+  ngOnInit(): void {
+   this.timer();
+  }
+  // It is not automatically collected by garbage collector of angular,So we use ngOnDestroy where we implement clearInterval function.(Can check line14) 
+  timer(){
+   this.time=setInterval(()=>{
+     this.num++;
+     console.log(this.num);
+   },1000);
+  }
+ 
+ 
+}
+------------------------------------------------------------------
+CHILD.HTML
+------------------------------------------------------------------
+<p>child works!</p>
+// we can print/display other things/operations.
+
+[Friday 10:18 AM] Parul Taley
+app.component.ts ----->
+ 
+@ViewChild('htxt') hobj:ElementRef;
+ 
+  @ViewChild(ChildComponent) cobj:ChildComponent;
+ 
+  flag:boolean=false;
+ 
+  ngOnInit(): void {
+
+    console.log('ngoninit',this.hobj)
+
+  }
+ 
+  ngAfterViewInit(): void {
+
+    console.log('ngafterviewinit',this.hobj)
+
+  }
+ 
+  ngAfterViewChecked(): void {
+
+    console.log('ngAfterViewChecked',this.hobj)
+
+    console.log(this.flag);
+
+    if(this.flag){
+
+      this.hobj.nativeElement.innerHTML = 'dynamic chnage - true';
+
+    }
+
+    else{
+
+      this.hobj.nativeElement.innerHTML = 'dynamic chnage - false';
+
+    }
+ 
+    console.log('ngAfterViewChecked',this.cobj.count)
+ 
+  }
+ 
+  btnClick(){
+
+    this.flag = !this.flag;
+
+  }
+ 
+------------------------------------------------------------
+ 
+app.component.html ----->
+ 
+<h1 #htxt>intital value</h1>
+ 
+<button (click)="btnClick()">click me</button>
+ 
+<app-child></app-child>
+ 
+----------------------------------------------------------
+ 
+child.component.html ----->
+ 
+count value : <button (click)="func()">click {{count}}</button>
+ 
+------------------------------------------------------
+ 
+child.component.ts ----->
+ 
+count = 1;
+ 
+func(){
+
+  this.count = this.count*2;
+
+}
+
+________________________
+
+[Friday 11:33 AM] Monil Sharma
+Register.Component.html
+ 
+<div class="container-fluid">
+  <h1>Registration Form</h1>
+ 
+  <form #userForm="ngForm">
+    {{ userForm.value | json }}
+    <br /><br />
+    {{ UserModel | json }}
+    <div class="form-group">
+      <label>Name</label>
+      <input
+        required
+        type="text"
+        name="uname"
+        class="form-control is-invalid"
+        [(ngModel)]="UserModel.name"
+        #uname="ngModel"
+      />
+    </div>
+    <!-- <h2>{{ uname.className }}</h2> -->
+    <br />
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        [(ngModel)]="UserModel.email"
+      />
+    </div>
+    <div class="form-group">
+      <label>Phone no</label>
+      <input
+        type="tel"
+        name="pname"
+        class="form-control"
+        [(ngModel)]="UserModel.phno"
+      />
+    </div>
+    <div class="form-group">
+      <!-- <select name="sname" class="custom-select" (ngModel)> -->
+      <select class="custom-select" [(ngModel)]="UserModel.course" name="sname">
+        <option selected>Select Course</option>
+        <option *ngFor="let s of sub">{{ s }}</option>
+      </select>
+    </div>
+ 
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label>Street</label>
+        <input type="tel" class="form-control" ngModel name="staddress" />
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="tel" class="form-control" ngModel name="ctaddress" />
+      </div>
+    </div>
+ 
+    <button class="btn btn-primary">Submit Form</button>
+  </form>
+</div>
+ 
+[Friday 11:34 AM] Monil Sharma
+Register.Component.ts
+ 
+import { Component } from '@angular/core';
+import { User } from '../Models/User';
+ 
+@Component({
+  selector: 'app-register',
+  templateUrl: './Register.Component.html',
+})
+export class RegisterComponent {
+  sub = ['Angular', 'React', 'C#', 'DotNet'];
+ 
+  UserModel = new User('Alok', 'alok@hcl.com', 1234567, 'Angular');
+}
+ 
+[Friday 11:34 AM] Monil Sharma
+User.ts
+ 
+export class User {
+  constructor(
+    public name: string,
+    public email: string,
+    public phno: number,
+    public course: string
+  ) {}
+}
+ 
+[Friday 11:44 AM] Srikant Soni
+var st1 = RegExp("^([0-9]{10})$");
+[Friday 11:47 AM] Anshika Maurya
+<!-- <button class="btn btn-info">Click me</button> -->
+ 
+ 
+<div class="container-fluid">
+    <h1>Registration Form</h1>
+    <form #userForm="ngForm">
+        {{userForm.value| json}}
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" [class.is-invalid]="uname.invalid && uname.touched" [(ngModel)]="UserModel.name" #uname="ngModel" name="uname" required >
+           
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control"  [(ngModel)]="UserModel.email" #email="ngModel" name="email">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" [(ngModel)]="UserModel.phone" #phone="ngModel" name="phone" required>
+        </div>
+        <div class="form-group">
+            <select class="custom-select"  [(ngModel)]="UserModel.course" name="UserModel.sname" >
+                <option selected>Select Course</option>
+                <option *ngFor="let i of sub">
+                    {{i}}
+                </option>
+            </select>
+           
+        </div>
+        <div ngModelGroup="address">
+            <div class="form-group">
+                <label>Street</label>
+                <input type="tel" class="form-control" ngModel name="staddress">
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="tel" class="form-control" ngModel name="ctaddress">
+            </div>
+        </div>
+        <button class="btn btn-primary">Submit Form</button>
+    </form>
+ 
+</div>
+ ________________________
+
+<!-- <button class="btn btn-info">Click me</button> -->
+ 
+ 
+<div class="container-fluid">
+    <h1>Registration Form</h1>
+    <form #userForm="ngForm">
+        {{userForm.value| json}}
+        <div class="form-group" >
+            <label>Name</label>
+            <input type="text" class="form-control" [class.is-invalid]="uname.invalid && uname.touched" [(ngModel)]="UserModel.name" #uname="ngModel" name="uname" required >
+           <small class="text-danger" [class.d-none]="uname.valid || uname.untouched" >Name is required</small>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control"  [(ngModel)]="UserModel.email" #email="ngModel" name="email">
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" [(ngModel)]="UserModel.phone" #phone="ngModel" name="phone" required>
+            <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+                <small class="text-danger" *ngIf="phone.errors['required']" >Phone No. is required</small>
+                <small class="text-danger" *ngIf="phone.errors['pattern']" >Phone No. must be of 10digits</small>
+            </div>
+            <small class="text-danger" [class.d-none]="phone.valid || phone.untouched" >Phone Number of 10digits is required</small>
+        </div>
+        <div class="form-group">
+            <select class="custom-select form-control"   [(ngModel)]="UserModel.course" [class.is-invalid]="topic.value=='' && topic.touched" #topic="ngModel" name="topic" >
+                <option selected value="">Select Course</option>
+                <option *ngFor="let i of course">
+                    {{i}}
+                </option>
+            </select>
+           
+        </div>
+        <div ngModelGroup="address">
+            <div class="form-group">
+                <label>Street</label>
+                <input type="tel" class="form-control" ngModel name="staddress">
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="tel" class="form-control" ngModel name="ctaddress">
+            </div>
+        </div>
+        <button class="btn btn-primary">Submit Form</button>
+    </form>
+ 
+</div>
+
+______________________
+

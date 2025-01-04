@@ -1,0 +1,71 @@
+Day 11 - 25 April 2024
+
+1.)	@HostBinding decorator - used for binding properties on component
+	@HostListener decorator - used for binding events on component
+
+2.)	Abstraction and Encapsulation in angular - through Classes and Methods.
+	Ex: Renderer2 class that has setStyle and setAttribute method
+	Purpose? Not to touch DOM directly
+
+	Example-
+
+	constructor(private ele: ElementRef, private render: Renderer2)
+   	{
+          		//  render.setStyle(ele.nativeElement, 'backgroundColor','Green' );
+         		// render.setAttribute(ele.nativeElement, 'title', 'I am Custom Directive2');
+   	}
+	@HostBinding('style.background') bgColor: string = 'Green'
+	@HostListener('mouseenter')onmouseenter()
+	{
+  	this.bgColor='Red'
+	}
+	@HostListener('mouseout')onmouseleave()
+	{
+  	this.bgColor='Yellow'
+	}
+
+3.)	Component Communication
+
+
+__________________________________________________________
+	parent.component.ts
+__________________________________________________________
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent {
+ 
+  num1:number = 1009;
+}
+
+___________________________________________________________
+	parent.component.html
+___________________________________________________________
+<p>parent works!</p>
+<app-child [item]="num1"></app-child>
+
+___________________________________________________________
+	child.component.ts
+___________________________________________________________
+import { Component, Input } from '@angular/core';
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent {
+ 
+  @Input() item = 0;
+ 
+}
+_______________________________________________________________
+	child.component.html
+_______________________________________________________________
+<p>child works!</p>
+ 
+data from parent: {{item}}
+ 
+

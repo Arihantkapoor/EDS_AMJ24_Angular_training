@@ -1,0 +1,172 @@
+Day 1- 10th April 2024
+
+6 hrs - javascript 
+
+6 hrs - Typescript 
+
+
+
+                                            Javascript 
+
+1- validations - business rules 
+
+2- HTML is static page. Make it dynamic by javascript.
+
+3- Browser creates DOM - document object model.
+
+4- javascript can access DOM and then it can reach to html controls 
+
+<input type="text" id="txtname">
+
+5- document.getElementById("txtname")
+
+
+Internal architecture or execution process of javascript.
+
+
+
+compilation phase-- parsing /tokenization/laxing(divide code in chunks) -- 
+
+
+identify errors early
+
+define the scope of variables.
+
+
+execution phase - Global execution context 
+
+                                       creation- Global memory allocation , code execution 
+
+
+ecmaScript - 2015 and 2016 - ES6 and ES7
+
+standard and rules for javascript
+
+netscape -javascript
+
+Internet explorer - JScript 
+
+
+
+Asp.net web forms , Asp.net MVC - JSP ,servlets -------------HTML controls at browser 
+
+http /https -protocol 
+
+GEC and FEC
+
+closures 
+
+
+function inside the function and can access variables and parameters of out function.
+
+by javascript - single threaded
+Synchroneous 
+
+Promise , async
+
+function outerfunc(fn,ln){
+
+    
+    function innerfunc(){
+
+      console.log(fn,ln);
+
+
+    }
+    
+       return innerfunc;
+}
+
+const a=outerfunc("dave","mike");
+a();
+
+
+
+const a=myfunc(3);
+const b=a(2);
+
+console.log(b) === 8
+
+function outerfunc(age){
+    const a="var A";
+    const b="var B";    
+    return function (){
+
+      console.log(a,b,age);
+    }  
+      
+}
+const res=outerfunc(22);
+res();
+
+class Person{
+
+    constructor(firstName,lastName,age){
+     
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.age=age;
+
+    }    
+
+    sample(){
+        return "simple method";
+    }
+
+   get fullName(){
+
+        return `${this.firstName} ${this.lastName}`;
+
+    }
+
+    set fullName(fullname){
+
+      const[fn,ln]=  fullname.split(" ");
+
+      this.firstName=fn;
+      this.lastName=ln;
+
+    }
+
+    static info(){
+        return "static method";
+    }
+
+    static demo="static properties";
+
+
+
+}
+
+let obj=new Person("ken","boback",44);
+console.log(obj.sample());
+console.log(obj.firstName);
+console.log(obj.lastName);
+console.log(obj.fullName);
+
+obj.fullName="john Travelta";
+
+console.log(obj.fullName);
+
+console.log(Person.info());
+
+
+function EmailDetails(){
+
+    var emailAddress=document.getElementById("txtemail").value;
+
+    var emailpart=emailAddress.substring(0,emailAddress.indexOf("@"));
+
+    var domainpart=emailAddress.substring(emailAddress.indexOf("@")+1);
+
+    document.getElementById("txtpart").value=emailpart;
+
+    document.getElementById("txtdomain").value=domainpart;
+
+
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8xU0uFMnd1y6DDcKDHh7/lIgai69OfflOwXDEC1K6WI=",
+  "Source": "SalesForceProAPI",
+  "BasePath": "_content/SalesForceProAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

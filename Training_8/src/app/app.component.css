@@ -1,0 +1,16 @@
+
+
+.app-container{
+    text-align: center;
+    border: white 2px solid;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.comp-container{
+    display: flexbox;
+    text-align: center;
+}

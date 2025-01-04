@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\controllers\\loginregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\controllers\\loginregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\models\\usercredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\models\\usercredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\salesforcepro project\\salesforceproapi\\salesforceproapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7EBFFCC-C7B3-4E0C-B360-80D020EA8B80}|SalesForceProAPI\\SalesForceProAPI.csproj|solutionrelative:salesforceproapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T06:43:16.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T06:43:12.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T06:42:57.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Controllers\\SalesController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Controllers\\SalesController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T15:55:26.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\Sale.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Models\\Sale.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\Sale.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Models\\Sale.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T15:55:15.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserCredential.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\UserCredential.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Models\\UserCredential.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\UserCredential.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Models\\UserCredential.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T04:31:15.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginRegisterController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\LoginRegisterController.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Controllers\\LoginRegisterController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Controllers\\LoginRegisterController.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Controllers\\LoginRegisterController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T11:58:26.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Models\\Login.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Models\\Login.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Models\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T10:26:21.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Program.cs",
+              "RelativeDocumentMoniker": "SalesForceProAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\SalesForcePro Project\\SalesForceProAPI\\SalesForceProAPI\\Program.cs",
+              "RelativeToolTip": "SalesForceProAPI\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAiwBoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T04:08:43.618Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+.form-container {
+    width: 400px; /* Adjust the width as needed */
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    right: 0;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+  }
+ 
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .form-group {
+    margin-bottom: 15px;
+  }
+ 
+  label {
+    font-weight: bold;
+  }
+ 
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s ease-in-out;
+  }
+ 
+  .form-control:focus {
+    outline: none;
+    border-color: #66afe9; /* Highlight color on focus */
+  }
+ 
+  textarea.form-control {
+    height: 60px; /* Adjust as needed */
+  }
+ 
+  .btn-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  .btn-submit:hover {
+    background-color: #45a049;
+  }
+ 
+
+  /* home */
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('background.jpg'); Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure full height coverage */
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('src/assets/img/inhand.png');
+    background-size: cover;
+    min-height: 90vh;
+    
+  }
+  
+  .description {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #666;
+  }
+  
+  .form-container {
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .description, .form-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .image-container {
+    width: 65%;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  ul {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+  

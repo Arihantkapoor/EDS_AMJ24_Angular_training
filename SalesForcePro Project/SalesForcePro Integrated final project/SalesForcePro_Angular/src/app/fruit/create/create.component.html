@@ -1,0 +1,30 @@
+<div class="container">
+    <legend>Create Product</legend>
+    <form>
+        <div class="mb-3">
+            <label for="txtName" class="form-label">Name</label>
+            <input type="text" name="productName" [(ngModel)]="formdata.productName" class="form-control" id="txtName" />
+        </div>
+        <div class="mb-3">
+            <label for="txtPrice" class="form-label">Price</label>
+            <input type="number" name="price" [(ngModel)]="formdata.price" class="form-control" id="txtPrice" />
+        </div>
+        <div class="mb-3">
+            <label for="txtQuantity" class="form-label">Quantity</label>
+            <input type="number" name="qty" [(ngModel)]="formdata.qty" class="form-control" id="txtQuantity" />
+        </div>
+        <div class="mb-3">
+            <label for="txtproductDescription" class="form-label">Product Description</label>
+            <input type="text" name="productDescription" [(ngModel)]="formdata.productDescription" class="form-control" id="txtproductDescription" />
+        </div>
+        <div class="mb-3">
+            <label for="txtisAvailable" class="form-label">Is Available</label>
+            <input type="text" name="isAvailable" [(ngModel)]="formdata.isAvailable" class="form-control" id="txtisAvailable" />
+        </div>
+        <div class="mb-3">
+            <label for="txtdiscount" class="form-label">Discount</label>
+            <input type="number" name="discount" [(ngModel)]="formdata.discount" class="form-control" id="txtdiscount" />
+        </div>
+        <button type="button" (click)="create()" class="btn btn-primary">Create</button>
+    </form>
+</div>

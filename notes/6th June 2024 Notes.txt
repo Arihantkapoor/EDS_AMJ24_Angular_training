@@ -1,0 +1,187 @@
+				Generics -> Class level Polymorphism
+
+1). Generics can be used with class/functions/delegate and interface. All these objects can be generics. 
+
+      1.1). Strongly typed
+    
+      1.2). Avoid Conversion
+
+      1.3). Avoid Boxing and Unboxing	
+
+      1.4). Generics class doesn't contain Main()
+
+2). The link between Event and Event handler function is delegate in GUI Applications, where you have the multiple elements like button.
+
+3). ICollection, IList, IEnumerable, IQuerable, -> Interface (Chole-Bhature)
+
+     Main Hero is IEnumerator -> Main Interface
+
+
+Question:- Why these interfaces came into picture?
+
+Solution: For making iterations, IEnumerator comes into picture
+
+	
+	
+					DotNet Core
+
+
+1). Everything is open-source in dotnet core.
+
+2). Kestral is a local server open-sourced, self-describing server written in Nodejs, so can be run on any OS. 
+
+   2.1) We have Core CLR (Runtime) and compiler name is Roslyn.
+
+3). In dotnet 5.0, we have startup.cs => startup class => configureServices(IServiceCollection), configure(IApplicationBuilder)
+
+     In dotnet 6/7/8, we have program.cs => builder(IServiceCollection) object, app(IApplicationBuilder) object
+
+     By builder object, we add services and by app object we add middlewares to create request pipeline. 
+
+
+				
+					 EF Core
+
+1). Eager Loading
+
+2). Lazy Loading
+
+3). Explicit Loading
+
+4). Deferred Execution
+
+5). Migration Architechture (Most important)
+
+6). Miscellaneous topics:
+     Joins in EF Core
+    Projections
+    Transactions
+    Performance and Optimization in EF Core
+
+
+
+				Web API Core
+
+Case Study 1: 
+
+CRUD operation with single table using EF Core. 
+
+a). Code First Approach
+
+b). Database First Approach
+
+
+Flow:
+
+Browser -> IIS -> Kestral ->Core CLR-> Program.cs -> As below
+
+Front-End (Angular, browser, swagger, PostMan) -> EmployeeController -> IEmployeeRepository(dependent object) -> EmployeeRepository -> DAL -> EmployeeDBContext(dependent object) -> DataBase
+
+Now developer has to find dependent objects. IOC and DI should be done for dependent objects.
+
+-> EmployeeDBContext's IOC and DI at EmployeeRepository is done.
+-> IEmployeeRepository/EmployeeRepository's IOC(program.cs) and DI at Controller.
+
+note: -> AddTransient will create object at per request/per call.
+         -> AddScoped will create object at controller level.
+         -> AddSingleton will create single object at session level.	
+
+
+IEmployeeRepository obj = new EmployeeRepository();
+
+Entity Framework core
+
+2 important classes -> DBContext (DML operation, transactions) , DBSet(just a data table like ADO.net's data table, it will generate the table with same name in the database)
+
+
+Database name and server will be provided by connection string and connection string we will mention in appsettings.json
+
+We require 4 packages to work with EntityFrameworkCore:
+
+1. Microsoft.entityFrameworkCore -> DbContext and DbSet 
+
+2. Microsoft.entityFrameworkCore.sqlServer -> for sql server 
+
+3. Microsoft.entityFrameworkCore.tools -> required for Code first approach
+
+4. Microsoft.entityFrameworkCore.design -> required for database first approach
+
+To work with mysql package name is MySql.Data.EntityFrameworkCore
+
+To work with Postgresql, package name is NpgSql.EntityFrameworkCore.Postgresql
+
+
+Migration:-
+1.  we will apply static migration. Migration means to generate script files to create database with all tables.
+
+2. EFCore provides tool to generate migration.
+
+3. First time, you have to release the command
+    dotnet tool install --global dotnet-ef 
+
+4. to check whether EFcore is installed, use dotnet ef in terminal
+
+5. dotnet ef migrations add <migration_name>  It will create the migration script for you. It will create one migration folder and one class with <migration_name> is created inside the folder and this class inherits Migration class
+
+6. dotnet ef database update It will create database in your sql server
+
+Case Study 2:
+
+Fluent Model Validation and Fluent API by Code first Approach
+
+AutoMapper 
+
+DTO (Data Transfer Objects)
+
+(Advanced):
+
+Case Study 3:
+
+Relationship in EF Core (One-to-One, One-to-Many)
+
+Repository Pattern
+    Generic and Basic repository
+
+
+Case Study 4:
+
+Project Architechture (Onion Architechture)
+
+Concept of Middlewares-> customer middleware and pre-defined middleware
+
+
+Case Study 5:
+
+Security:
+  
+  1). Token authentication by JWT(Json Web Token)
+
+   2). 3rd party authentication using Owin
+
+
+Case Study 6:
+
+Microservices and Minimal APIs
+
+Case Study 7:
+
+Unit of Work Pattern (includes Generics repository, Dynamic migration, how to handle transactions).
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+
+
+
+
+

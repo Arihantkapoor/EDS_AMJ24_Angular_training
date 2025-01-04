@@ -1,0 +1,338 @@
+Day 2- 11th April 2024
+
+
+
+var and let 
+
+
+var- scope is global
+
+let - block level -- {}
+
+const - block level
+
+
+var and let - we can reassign the values.
+
+var - we can create same name variable again but in let its not the case.
+
+let -- unIniilized
+
+var -- undefined
+
+
+if (false)
+
+null
+undefined
+""
+0
+
+
+input from the user -- string 
+
+
+convert string to int by + symbol
+
+
+what is Rest operator and spread operator
+
+
+param in c# 
+
+function sample(){
+
+    let x=+prompt("Pls enter first number");
+
+    let y=+prompt("pls enter second number");
+
+    document.getElementById("txtRes").value=x+y;
+
+
+
+}
+
+sample();
+
+-----Rest and spread operator
+
+function sample(fn,...args){// rest opeartor
+
+   let sum=0;
+    for(let i in args){
+        sum=sum+args[i];
+    }
+
+     console.log(sum);
+
+
+}
+ var arr=[10,20,30];
+
+sample("john",...arr); //spread opearrtor
+
+
+Rest -- handling variable number of parameters --- 10,20,30,--- [2,3,4]
+
+if user pass array to rest operator then rest opeartor
+
+user pass array as a spread operator-- 
+
+arr=[10,20,30]
+
+                                sample(...arr)
+
+
+ var arr1=[10,20,30];
+
+    var arr2=[40,"sample"];
+
+    var arr3=[...arr1,...arr2];
+
+    console.log(arr3);
+
+
+
+callback function 
+
+any function that is passed as an argument is callback function-
+
+callback function is a function that is to be executed after another function has finished execution- in order
+
+flexibility to pass function as argument.
+
+association .
+
+
+func1(c){
+f1();
+
+}
+
+func1(f1)
+
+
+product - TV--- function(f2) 
+
+20% discount---- f1
+
+10% discount ----f2
+
+
+callback hell problem
+
+Promise
+
+async/await
+
+observable - Angular
+
+
+synchroneous and single threaded -- locking operation
+
+long running function - long running code- my single thread is busy here.
+
+f2(); maximize 
+
+f3(); minimize 
+
+spread opeartor---------
+
+  var obj1={name:"john"};
+
+   var obj2={id:"3"};
+
+   var obj3={...obj1,...obj2};
+
+   console.log(obj3);
+
+NInject - IOC containers - 
+
+IIS/Tomcat--------     Kestral server ------------Request pipeline(middlewares(extension methods, UseMVC, UseStaticFiles))-----------------api controller -IOC -DI 
+
+new keyword 
+
+till .net 5 ----startup.cs
+
+
+
+
+.net 6 ---onwards - program.cs--- middleware - Use ,Run()- Terminate 
+
+
+custom middleware - dynamic migration.
+
+
+function sample(){
+
+}
+sample();
+
+var ab= function(){
+
+
+}
+ab();
+
+var ab=()=>{
+
+
+}
+ab();
+
+
+
+
+
+
+console.log("script start");//1
+
+
+setTimeout(()=>{
+
+    console.log("inside setTimeout");
+
+
+},2000);
+
+console.log("script end");//3
+
+
+console.log("script start");//1
+
+setTimeout(()=>{
+
+    console.log("inside setTimeout");//2
+
+},0);
+
+for(let i=1;i<10000;i++){ //3
+    console.log("inside loop");
+}
+console.log("script end");//4
+
+
+
+function gettwonumbersAndAdd(num1,num2,onSuccess,onFail){
+
+    if(typeof num1==="number" && typeof num2==="number"){
+        onSuccess(num1,num2);
+
+    }
+    else{
+        onFail();
+
+    }
+
+}
+function addnumbers(n1,n2){
+
+    console.log(n1+n2);
+}
+
+function onFail(){
+
+    console.log("wrong data type");
+}
+
+gettwonumbersAndAdd("2",3,addnumbers,onFail);
+
+
+arrow function 
+
+function gettwonumbersAndAdd(num1,num2,onSuccess,onFail){
+
+    if(typeof num1==="number" && typeof num2==="number"){
+        onSuccess(num1,num2);
+
+    }
+    else{
+        onFail();
+
+    }
+
+}
+// function addnumbers(n1,n2){
+
+//     console.log(n1+n2);
+// }
+
+// function onFail(){
+
+//     console.log("wrong data type");
+// }
+
+gettwonumbersAndAdd(2,3,(n1,n2)=>{
+    console.log(n1+n2);
+},()=>{
+    console.log("wrong data type");
+});
+
+
+Hello World - Hi
+
+Hello World - Hi
+
+Hello World 
+
+Hello World 
+
+Hello World 
+
+Hello World 
+
+Hello World 
+
+Hello World 
+
+ Pyramid of doom
+
+
+Promise - status   Pending
+
+            Fullfilled - meeting at HCL office
+
+            Rejected -- some urgent work , see you some other day
+
+
+ var test= async ()=>{ // async return back promise
+
+        return "hello";
+
+       }
+        test().then((res)=>{
+         console.log(res);
+        }).catch()
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    async function test(){
+
+        console.log("2 : message");
+     const res=  await fetch("sample.json");
+        console.log("3 : message");
+      const user=  res.json();
+
+      return user;
+
+    }
+
+    console.log("1 : message");
+   let result= test();
+    console.log("5 : message");
+
+    console.log(result);
+
+    </script>
+    
+</body>
+</html>
+ 

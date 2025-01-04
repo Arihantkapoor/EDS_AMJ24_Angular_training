@@ -1,0 +1,128 @@
+.form-container {
+  width: 400px; /* Adjust the width as needed */
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: fixed;
+  right: 0;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #66afe9; /* Highlight color on focus */
+}
+
+textarea.form-control {
+  height: 60px; /* Adjust as needed */
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+ 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* table */
+ 
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529; /* Text color */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ 
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6; /* Border color */
+}
+ 
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; /* Header bottom border */
+  background-color: #f8f9fa; /* Header background color */
+}
+ 
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+ 
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075); /* Hover background color */
+}
+ 
+.table-bordered {
+  border: 1px solid #dee2e6; /* Table border */
+}
+ 
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6; /* Cell borders */
+}
+ 
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 123, 255, 0.1); /* Active row background color */
+}
+ 
+/* Customize table cell padding or spacing as needed */
+.table th,
+.table td {
+  padding: 0.75rem;
+}

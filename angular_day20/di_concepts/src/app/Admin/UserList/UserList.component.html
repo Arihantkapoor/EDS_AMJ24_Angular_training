@@ -1,0 +1,19 @@
+<p>
+  UserList works!
+</p>
+
+
+<table class="table table-bordered" border="1" >
+  <tr>
+    <th>Name</th>
+    <th>Gender</th>
+    <th>Subscription Type</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor = "let items of userList">
+    <td>{{items.name}}</td>
+    <td>{{items.gender}}</td>
+    <td>{{items.subscriptionType}}</td>
+    <td>{{items.status}}</td>
+  </tr>
+</table>

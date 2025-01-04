@@ -1,0 +1,56 @@
+
+<fa-icon [icon]="faCoffee"></fa-icon>
+
+<div class="app-container">
+<h1>This is the app component h1 tag</h1>
+
+<p>All Might - Plus Ultra (p tag)</p>
+
+
+<button>Submit</button>
+</div>
+
+
+<!-- <input [(ngModel)]="color">
+<div [ngStyle]="{'color':color}">
+    Change my color
+</div>
+
+<input [(ngModel)]="size">
+<div [ngStyle]="{'font-size.px':size}">
+    Change my size
+</div>
+
+<p [ngStyle]="{color:flag?'Green':'Red'}">
+    {{title}}
+</p>
+
+
+<p [ngStyle]="{'color': 'purple', 'font-size':'20px','font-weight':'bold'}">
+    Multiple styling
+</p>
+
+<p [style.color]="'red'">
+    Give me RED
+</p>
+
+<button [style.color]="getColor()">conditional</button>
+
+
+<button [style.color]="flag?'Green':'Red'">conditional</button>
+
+<button [style.border]="'5px solid yellow'">Yellow button</button>
+ -->
+
+<button [style.font-size.px]="'20'">button1</button>
+
+<button [style.fontSize.px]="'30'">button2</button>
+
+<p [style.color]="getColor()" [style.font-size.px] = "'20'" [style.background-color]="flag?'Green':'purple'">
+Paragraph with multiple styles.
+</p>
+
+<div class="comp-container">
+    <app-child1></app-child1>
+    <app-child2></app-child2>
+</div>

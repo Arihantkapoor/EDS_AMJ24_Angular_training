@@ -1,0 +1,17 @@
+<p>
+  login works!
+</p>
+
+
+<div>
+  <form #loginform="ngForm" (ngSubmit)="OnFormSubmit(loginform)">
+
+    <div>
+      <label>Name</label>
+      <input type="text" placeholder="enter name" [(ngModel)]="name" name="name">
+    </div>
+    <button type="submit">login</button>
+  </form>
+  
+
+</div>

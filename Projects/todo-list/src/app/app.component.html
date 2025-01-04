@@ -1,0 +1,24 @@
+<div class="navbar navbar-dark bg-light">
+  <h1>Todo List</h1>
+</div>
+ 
+<h2>Enter your daily tasks</h2>
+<div class="new-item">
+ 
+
+  <input class="btn btn-outline-warning"  type="text" placeholder="Enter your tasks" [(ngModel)] = "newtask" #prop required>
+  
+  <button class="btn btn-outline-primary" (click)="AddTask()">Enter task</button>
+  
+</div>
+ 
+<br>
+<br>
+ 
+<div class="existing-item" *ngFor="let items of tasks;let i = index">
+  <div class="box">
+  <p id="i">{{items}}</p>
+  <button class="btn btn-outline-success" (click)="updateTask(i)">Update Task</button>
+  <button class="btn btn-outline-danger" (click)="removeTask(i)">Delete task</button>
+</div>
+</div>

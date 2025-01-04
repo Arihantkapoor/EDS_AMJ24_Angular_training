@@ -1,0 +1,59 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "name": "Uchiha Madara",
+      "username": "ghost of the Uchiha"
+    },
+    {
+      "id": 2,
+      "name": "Uchiha Itachi",
+      "username": "Itachi of the Sharingan"
+    },
+    {
+      "id": 3,
+      "name": "Uzumaki Nagato",
+      "username": "Pain"
+    },
+    {
+      "id": 4,
+      "name": "Uzumaki Naruto",
+      "username": "knucklehead Ninja"
+    },
+    {
+      "id": 5,
+      "name": "Hatake Kakashi",
+      "username": "Copy Ninja"
+    },
+    {
+      "id": 6,
+      "name": "Senju Hashirama",
+      "username": "God of Shinobi"
+    },
+    {
+      "id": 7,
+      "name": "Yagi Toshinori",
+      "username": "All Might"
+    },
+    {
+      "id": 8,
+      "name": "Kaneki Ken",
+      "username": "One Eyed King"
+    },
+    {
+      "id": 9,
+      "name": "Kyojuro Rengoku",
+      "username": "Flame Hashira"
+    },
+    {
+      "id": 10,
+      "name": "Namikaze Minato",
+      "username": "Yellow Flash of the Leaf"
+    },
+    {
+      "id": "11",
+      "name": "Arihant",
+      "username": "arihant_14"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function Prom(success){
+            return new Promise(function(resolve,reject){
+                if(success){
+                    resolve('got success');
+                }
+                else{
+                    reject('got failed');
+                }
+            });
+        }
+
+        function onfullFill(result){
+            console.log(result);
+        }
+
+        function onReject(error){
+            console.log(error);
+        }
+        Prom(false).then(onfullFill).catch(onReject);
+
+
+
+    </script>
+</body>
+</html>

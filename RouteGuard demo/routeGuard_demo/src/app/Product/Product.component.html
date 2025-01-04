@@ -1,0 +1,26 @@
+<h1>Product component display</h1>
+
+
+<table>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Price</td>
+  </tr>
+  <tr *ngFor="let i of products">
+    <td>
+      {{i.id}}
+    </td>
+    <td>
+      <a routerLink="detail/{{i.id}}">
+        {{i.name}}
+      </a>
+     
+
+    </td>
+    <td>
+      {{i.price}}
+
+    </td>
+  </tr>
+</table>

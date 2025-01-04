@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="btnGetAll">Get All Employees</button>
+    <br>
+    <input type="text" id="txtGetById">
+    <button id="btnGetById" onclick="getById()">Get Employee By Id</button>
+    <br>
+    <input type="text" id="txtDeleteById" placeholder="Employee Id to delete">
+    <button id="btnGetById" onclick="DeleteEmployee()">Delete Employee</button>
+    <br>
+    <input type="text" id="txtPost" placeholder="Enter employee name to add">
+    <button id="btnPost" onclick="AddEmployee()">Add Employee</button>
+    <br>
+    <button id="btnUpdate" onclick="UpdateEmployee()">Update Employee</button>
+</body>
+<script>
+    //jQuery code
+    $(document).ready(function () {
+        $('#btnGetAll').click(function () {
+            fetch("http://localhost:5174/api/Employee/loadData").then(res => {
+                return res.json();
+            }).then(data => {
+                console.log(data);
+            }).catch(error => {
+                console.log(error);
+            })
+        })
+    })
+
+
+
+    function getAllEmployees() {
+        fetch("http://localhost:5174/api/Employee/loadData").then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    function getById() {
+        const id = document.getElementById("txtGetById").value;
+        fetch("http://localhost:5174/api/Employee/SearchData?id=" + id).then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+    function DeleteEmployee() {
+        const id = document.getElementById("txtDeleteById").value;
+        fetch("http://localhost:5174/api/Employee/DeleteData?id=" + id, requestOptionDelete).then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+    //For POST, PUT and DELETE, we also have to send these things like method, Headers etc
+    const requestOptionDelete = {
+        method: "Delete",
+        Headers: { "Content-Type": "application/json" }
+    }
+
+
+
+
+
+    function AddEmployee() {
+        const empName = document.getElementById("txtPost").value;
+        const data = {
+            name: empName
+        }
+
+        const requestOptionAdd = {
+            method: "post",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        }
+
+        fetch("http://localhost:5174/api/Employee/PostData", requestOptionAdd)
+            .then(res => {
+                return res.json();
+            }).then(data => {
+                console.log(data);
+            }).catch(error => {
+                console.log(error);
+            })
+    }
+
+    function UpdateEmployee() {
+        // const id = document.getElementById("txtAddEmployeeName").value;
+        fetch("http://localhost:5174/api/Employee/UpdateData", requestOptionUpdate).then((res) => {
+
+            return res.json()
+        }).then((data) => {
+            console.log(data)
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+
+    const dataUpdate = {
+        id: 6,
+        name: "Alok"
+    }
+
+    const requestOptionUpdate = {
+        method: "put",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataUpdate)
+    }
+</script>
+
+</html>

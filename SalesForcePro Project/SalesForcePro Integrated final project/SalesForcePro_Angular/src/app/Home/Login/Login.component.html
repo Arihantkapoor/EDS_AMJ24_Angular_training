@@ -1,0 +1,40 @@
+<!-- <img src="assets/img/inhand.png"> -->
+<div class="container">
+  <div class="description">
+     <h1>Welcome to SalesforcePro</h1>
+        <p>SalesforcePro is your premier sales automation platform designed to streamline your sales processes and boost productivity.</p>
+        <p>Features include:</p>
+    <ul>
+      <li>Lead management</li>
+      <li>Opportunity tracking</li>
+      <li>Automated workflows</li>
+      <li>Integration with CRM systems</li>
+      <li>Advanced analytics</li>
+    </ul>
+        <p>Log in here to access your account:</p>
+  </div>
+  
+</div>
+<div class="form-container">
+  <h2>Login Here</h2>
+  <form class="custom-form" [formGroup]="userForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control" [class.is-invalid]="Email?.invalid && Email?.touched" placeholder="Enter your email address" formControlName="Email" >
+      <div *ngIf="Email?.invalid && Email?.touched">
+        <small class="text-danger" *ngIf="Email?.errors?.['required']">Email is required</small>
+        <small class="text-danger" *ngIf="Email?.errors?.['email']">Invalid Email</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" formControlName="UsersPassword" [class.is-invalid]="Password?.invalid&&Password?.touched">
+      <div *ngIf="Password?.invalid && Password?.touched">
+        <small class="text-danger" *ngIf="Password?.errors?.['required']">Password is required</small>
+      </div>
+    </div> 
+    
+    <button type="submit" class="btn-submit" [disabled]="userForm.invalid" (click)="submitForm(userForm)">Login</button>
+  </form>
+</div>
+ 

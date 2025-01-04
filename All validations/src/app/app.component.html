@@ -1,0 +1,82 @@
+<div class="container mt-4">
+  <form [formGroup]="UserForm" (ngSubmit)="hello()">
+    {{ UserForm.value | json }}
+    <h2 style="text-align: center;">Angular Reactive Form</h2>
+ 
+    <div class="form-group">
+      <label for="fullName">Full Name</label> <br>
+      <input type="text" id="fullName" class="form-control"
+        [class.is-invalid]="userFullName?.invalid && userFullName?.touched" formControlName="UserFullName" #ref>
+        <div *ngIf="userFullName?.invalid && userFullName?.touched">
+          <small class="text-danger" *ngIf="userFullName?.errors?.['required'] && userFullName?.touched">Name is
+            required.</small>
+            <small class="text-danger" *ngIf="userFullName?.errors?.['minlength'] && userFullName?.touched">Minimum length should be 3.</small>
+        </div>
+
+        <br>
+        {{ref.className}} <br>
+     
+    </div> <br>
+ 
+    <div class="form-group">
+      <label for="email">Email</label> <br>
+      <input type="email" id="email" class="form-control" [class.is-invalid]="userEmail?.invalid && userEmail?.touched" formControlName="UserEmail">
+      <div *ngIf="userEmail?.invalid && userEmail?.touched">
+        <small class="text-danger" *ngIf="userEmail?.errors?.['required'] && userEmail?.touched">Email is
+          required.</small>
+          <small class="text-danger" *ngIf="userEmail?.errors?.['pattern'] && userEmail?.touched">Inavlid email.</small>
+      </div>
+    </div> <br>
+    <!-- [class.is-invalid]="userGender?.invalid && userGender?.touched" -->
+    <div class="form-group">
+      <label>Select Gender</label> <br>
+      <select formControlName="UserGender"  (change)="myFunction()" [class.ashish]="isError" #abc >
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Prefer not to say</option>
+      </select> <br>
+      <small class="text-danger" *ngIf="userGender?.invalid && userGender?.touched">Gender is required.</small>
+    </div> <br>
+    <!-- {{abc.className}} <br> -->
+ 
+    <div class="form-group">
+      <label for="password">Password</label> <br>
+      <input type="password" id="password" class="form-control" formControlName="UserPassword" #pwd>
+    </div> <br>
+ 
+    <!-- {{pwd.className}} <br> -->
+   
+ 
+    <div formGroupName="Address">
+      <div class="form-group">
+        <label>State</label> <br>
+        <select formControlName="UserState" [class.is-invalid]="userState?.invalid && userState?.touched">
+          <option value="">Please select your state</option>
+          <option *ngFor="let x of states" [value]="x">{{x}}</option>
+        </select> <br>
+        <small class="text-danger" *ngIf="userState?.invalid && userState?.touched">State is required.</small>
+      </div> <br>
+     
+ 
+      <div class="form-group">
+        <label>City</label> <br>
+        <select formControlName="UserCity" [class.is-invalid]="userCity?.invalid && userCity?.touched">
+          <option value="">Please select your city</option>
+          <option *ngFor="let x of currentCities" [value]="x">{{x}}</option>
+        </select> <br>
+        <small class="text-danger" *ngIf="userCity?.invalid && userCity?.touched">City is required.</small>
+      </div> <br>
+ 
+      <div class="form-group">
+        <label for="country">Country</label> <br>
+        <input type="text" id="country" class="form-control" formControlName="UserCountry">
+      </div>
+    </div> <br>
+ 
+    <button class="btn btn-success" style="display: block; margin-left: auto; margin-right: auto;"
+      [disabled]="!UserForm.valid" (click)="showMessage()"  >Submit</button>
+ 
+  </form>
+</div>
+ 

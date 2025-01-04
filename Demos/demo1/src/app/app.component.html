@@ -1,0 +1,13 @@
+<div>
+
+  <form [formGroup]="userform">
+
+    <div>
+      <label>Enter a number</label>
+      <input type="number" formControlName="userInput">
+      <small class="text-danger" *ngIf="userform.get('userInput')?.errors?.custom">Number is less than equal to 10</small>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,71 @@
+day 10- 24 April 2024
+
+
+1. What is IOC(Inversion of Control).
+
+   Design the application in such a way that component should not involve for memory allocation
+
+	of class. So we need to apply inversion of control principle( to give responsiblity
+
+to someone else for memory allocation)
+ 
+2. What is Dependency Injection?
+
+3. Can you explain providers architecture?
+
+4. What is the default container for angular?
+
+	Ninja Container or nInject
+
+	Implementation of IOC.
+ 
+Step 1. Add @Injectable decorator to the service whose memory has to be created by IOC container.
+ 
+Step 2. Now we will tell to IOC Container or angular container that which class memory has to be
+
+created. This is done by attribute called providers.
+ 
+We can mark providers in two ways:-
+ 
+1. In component:- per call
+
+2. In app Module:- Per session
+ 
+Note :- Service can be implemented by multiple components. So approach 2 is better of app module.
+ 
+ 
+If service is implemented by single component then approach 1 is better.
+ 
+ 
+Dependency Injection(When IOC container should create the memory allocation for service class).
+ 
+We can achieve DI by 3 ways:-
+ 
+1. Constructor(Generally we achieve DI by constructor).
+
+2. Method
+
+3. Properties
+ 
+ 
+ 
+
+Component communication in Angular:
+ 
+-->Component communication can be achieved by 3 ways:
+>Parent to child (Can achieved by @Input Parameter, custom property binding)
+ 
+ 
+	>Child to Parent (Can achieved by @Output Parameter, custom event binding)
+ 
+ 
+	>Communication between sibling components
+ 
+	
+	          This can be achieved by two ways:
+>By Input & Output both parameters
+> By Services      
+ 
+ 
+ 
+ 

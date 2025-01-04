@@ -1,0 +1,72 @@
+Day 5 - 16 April 2024
+
+
+
+Fearures and working of Angular-
+
+1- Angular provides local server for development called "dev server" or "lite server"
+
+it comes with when you install the Angular.
+
+2- Production -we can deploy into IIS, Tomcat or weblogic etc.
+
+        approx 6 steps - 
+
+3- ng serve -- Angular life cycle starts.
+
+Main.ts
+
+
+to generate tsconfig file explicitly 
+
+>tsc --init
+
+>tsc -- to generate dist(given in outdir ) folder and  move all .js files to dist.
+
+
+D:/dist ------------------IIS map  
+
+
+tsconfig file is used to give configuration for tsc compiler.
+
+package.json
+
+vs
+
+package-lock.json
+
+
+Building blocks of Angular application-
+
+Building Blocks of Angular Application
+ 
+-> from Angular 2 to 16, we are constructing blocks of our angular application by AppModule/ngModule
+ 
+1) we add modules(form, app modules)
+ 
+2) we add components
+ 
+3) use templates
+ 
+4) data binding
+ 
+5) to enhance the existing tags, we use inbuilt directives(*ngFor, *ngIf, *ngSwitch etc);
+ 
+6) we can create our custom directives also for my own tags
+ 
+7) creation of own tags by components and append to existing HTML, this is set to be virtual DOM
+ 
+8) we create services in angular to hit RESTful core web api, web api 2.0 etc
+ 
+9) we use the concept of IOC(inversion of control) and DI(Dependency Injection) to call my service
+ 
+10) in angular we have IOC container(Ninject or Ninja) to create my memory allocation etc
+
+jquery CDN
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+
+

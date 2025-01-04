@@ -1,0 +1,14 @@
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\bin\Debug\net8.0\myConsoleApp.exe
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\bin\Debug\net8.0\myConsoleApp.deps.json
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\bin\Debug\net8.0\myConsoleApp.runtimeconfig.json
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\bin\Debug\net8.0\myConsoleApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\bin\Debug\net8.0\myConsoleApp.pdb
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.AssemblyInfoInputs.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.AssemblyInfo.cs
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\refint\myConsoleApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.pdb
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\myConsoleApp.genruntimeconfig.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\dotnet training\myConsoleApp\obj\Debug\net8.0\ref\myConsoleApp.dll

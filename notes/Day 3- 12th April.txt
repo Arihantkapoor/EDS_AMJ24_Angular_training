@@ -1,0 +1,255 @@
+Day 3- 12th April
+
+node - nodejs official website - windows OS
+
+typescript - npm install -g typescript
+
+npm install -g@angular/cli     -----
+
+
+.net - libraries - C#
+
+jsp/servlets- packages - java
+
+node/angular- modules
+
+angular - typescript
+
+Asp.net MVC --------- C#
+
+Angular ---  --- Typescript
+
+
+  JavaSCript  - hi - color
+  JavaScript
+
+
+
+
+const sample1=document.querySelector(".sample1");
+const sample2=document.querySelector(".sample2");
+const sample3=document.querySelector(".sample3");
+
+
+setTimeout(()=>{
+    sample1.textContent="one";
+    sample1.style.color="red";
+    setTimeout(()=>{
+        sample2.textContent="two";
+        sample2.style.color="green";
+     setTimeout(() => {
+        sample3.textContent="three";
+        sample3.style.color="blue";
+     }, 1000);
+
+    },1000)
+
+},1000)
+
+
+function changeText(element,text,color,time){
+
+setTimeout
+     
+
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="demo2.js" defer></script>
+</head>
+<body>
+
+
+    <h1 class="sample1">JavaScript</h1>
+    <h1 class="sample2">JavaScript</h1>
+    <h1 class="sample3">JavaScript</h1>
+    <h1 class="sample4">JavaScript</h1>
+    <h1 class="sample5">JavaScript</h1>
+    <h1 class="sample6">JavaScript</h1>
+    <h1 class="sample7">JavaScript</h1>
+    <h1 class="sample8">JavaScript</h1>
+    <h1 class="sample9">JavaScript</h1>
+    <h1 class="sample10">JavaScript</h1>
+    
+</body>
+</html>
+
+const body=document.body; // getting body from the DOM at runtime
+
+const button=document.querySelector("button"); // getting button from DOM
+
+const id=setInterval(()=>{
+
+   const red= Math.floor(Math.random() * 126);
+   const blue=Math.floor(Math.random() * 126);
+   const green=Math.floor(Math.random() * 126);
+
+   const rgb=`rgb(${red},${blue},${green})`;
+
+  body.style.background=rgb;
+
+},1000)
+
+button.addEventListener("click",()=>{
+    clearInterval(id);
+    button.textContent=body.style.background;
+})
+
+
+
+                                            Typescript
+
+javac - java compliler
+
+c# - CSC
+
+TSC is compiler of typescript - which converts typescript to javascript because atlast angular has to execute on browser.
+
+
+
+Typescript= Javascript + syntax for types +additional features
+
+tsc demo.ts ---- transpilation --- demo.js
+
+>node demo.js 
+
+ts-node --- execute typescript at runtime node js.
+
+>npm install typescript ts-node  --- not recommded
+
+>npx ts-node demo.ts --- execute typescript file. 
+
+>npm install -g typescript ---  
+
+d:/angularPrac/>npm install --save typescript ---- locally it will install TSC.
+
+tsc demo.ts --- tsc not recognized
+
+
+Interface -- 
+
+150 rs - subscription ---- I1 - Login()
+
+1200 -subscription  ----I2- all methods
+
+wcf - service - contract 
+wcf----
+
+
+client 1- 
+ 2 add, mult    I1
+
+client 2  -I2
+
+ 3- division 
+
+ 
+Typescript -- interfaces are providing uniformity and strogly typed to various objects.
+
+DRY- do not repeat yourself.
+
+import(using) and export(namespace or public) 
+
+namespace {
+
+class1
+
+
+class2
+
+
+export class
+
+class HCL{
+    id:number;
+    name:string;
+
+    constructor(i:number,n:string){
+
+      this.id=i;
+      this.name=n;
+
+    }
+
+    display():void{
+
+        console.log(this.id);
+        console.log(this.name);
+    }
+
+}
+let obj=new HCL(101,"john");
+obj.display();
+
+
+export class HCL{
+    id:number;
+    name:string;
+
+    constructor(i:number,n:string){
+
+      this.id=i;
+      this.name=n;
+
+    }
+
+    display():void{
+
+        console.log(this.id);
+        console.log(this.name);
+    }
+
+}
+
+export class HCLNoida{
+    id:number;
+    name:string;
+
+    constructor(i:number,n:string){
+
+      this.id=i;
+      this.name=n;
+
+    }
+
+    display():void{
+
+        console.log(this.id);
+        console.log(this.name);
+    }
+
+}
+
+
+import { HCLNoida,HCL } from "./HCL";
+
+
+class HclClient{
+
+    constructor(){
+
+        let obj=new HCL(11,"ken");
+        obj.display();  
+        
+        let obj1=new HCLNoida(12,"dave");
+        obj1.display();  
+        
+
+    }
+
+
+}
+let hcl=new HclClient();
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+Day 9- 23 April 2024
+
+Pipes in Angular
+ 
+     There are two categories of pipes in angular
+> first is build in pipes 
+> second is custom pipes 
+     we can create parameterized pipes and chaining of pipes
+     some of inbuild pipes are
+ 
+          1.Json pipes
+          2.key value pipes
+          3.Async pipes(this we will use with services)
+          4.date pipes
+          5.slice pipes
+          6.Currency pipes
+          7.Numbers/decimal pipes
+          8.Percent pipes
+          9.Lowercase and Uppercase pipes
+ 
+       Async and await are markers which mark code position from where control should resume after a task or thread completes.
+ 
+
+
+Default Sorting in KeyValue Pipe : 
+1. Default sorting is in Ascending order if keys are number.
+2. Default sorting is in Alphabetical order if keys are string.
+3. If keys are of different types, then you convert keys to string values and then it will be in alphabetical order.
+
+Internal functionality of  *ngIf:
+ 
+	1> Here we have TemplateRef  this will tell to angular which block to view
+ 
+	2> ViewContainerRef is a class to give the reference of which view container needs to display
+ 
+
+TemplateRef - represents the element where directive is applied. and ViewContainer has the container element for the component. and createEmbed method embed the eligible view into DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

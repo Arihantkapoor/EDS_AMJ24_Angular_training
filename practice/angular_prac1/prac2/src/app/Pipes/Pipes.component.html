@@ -1,0 +1,34 @@
+
+<table border="4">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let items of employees">
+    <td>{{items.id}}</td>
+    <td>{{items.name | title: items.gender}}</td>
+    <td>{{items.salary}}</td>
+    
+  </tr>
+</table>
+
+<br>
+
+<br>
+
+
+<div *ngFor="let items of employees">
+  {{items.id}}   <br> {{items.name}} <br> {{items.salary}}
+</div>
+
+<!-- <li *ngFor="let item of obj|keyvalue">
+  {{item.key}} || {{item.value}}
+</li> -->
+
+<li>
+  {{obj|keyvalue}}
+</li>
+
+<br>
+<p>{{value|currency}}</p>

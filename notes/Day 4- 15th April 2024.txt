@@ -1,0 +1,80 @@
+Day 4- 15th April 2024
+
+ 
+
+Generics in typescript
+
+
+UAT- user acceptance test
+
+
+generics says i will be avaialble for all data types but one at a time.
+
+
+function isequalNumber<T>(num1:T,num2:T){ 
+
+    return (num1==num2);
+
+}
+
+console.log(isequalNumber<string>("john","ken"));
+
+console.log(isequalNumber<number>(2,1));
+
+
+
+2 angular projects in same system with 2 seperate versions.
+
+1- Global
+2- local
+
+
+                                     Angular-
+
+
+Workspace -- directory by >md myfirstapp
+
+>cd myfirstapp
+>myfirstapp>ng new myangularapp
+>cd myangularapp
+
+>myfirstapp>myangularapp>ng serve -o 
+
+>myfirstapp>myangularapp>ng build  ---  all ts converts to js 
+
+                                      web application development
+
+
+  server side technologies -web server - Asp.net , MVC , Web api ,c# -connectivity- interact with database    server
+
+  
+
+client side technologies - browser - JS , HTML,CSS, jquery, Angular ,React,Vue.js etc
+
+Asp.net web forms -- 
+
+  HTML                   asp.net server controls --- C# (data)
+  
+page class - page life cycle - 12 events                         
+
+Rendering on browser ----all server control converts to html because browser only understands 
+
+page class -------controller class 
+
+Asp.net MVC ----- .cshtml --- Razor view engine - we gain preformance here 60 -70%
+
+in html i can write c# code 
+
+
+Html -----JS -----   api 
+
+
+
+
+
+
+
+
+
+
+

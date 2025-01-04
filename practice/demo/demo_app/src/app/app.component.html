@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="userform">
+
+    {{userform.value | json}}
+
+    <br>
+    <br>
+
+    <div class="form-group">
+      <label>Enter your password</label>
+      <input type="password" formControlName = "password">
+      <small class="text-danger" *ngIf="userform.get('password')?.errors?.required && userform.get('password')?.touched">
+        password is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>confirm your password</label>
+      <input type="password" formControlName="confirmpassword">
+      <small class="text-danger" *ngIf="userform?.errors?.chkpwd">
+        Password don't match {{userform.errors?.mismatch}}
+      </small>
+    </div>
+
+
+
+  </form>
+</div>

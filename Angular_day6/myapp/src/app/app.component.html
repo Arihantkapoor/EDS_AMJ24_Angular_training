@@ -1,0 +1,73 @@
+<h1>ngIf internal working/ making custom conditional Directive</h1>
+
+<!-- <p *appMyDirective = "condition">Hello World</p> -->
+
+<p  *appDemoDirective = "condition">Hello demo directive</p>
+
+<button (click)="condition=!condition">Change condition</button>
+
+
+
+
+<br>
+<hr>
+<br>
+
+<table border="1">
+
+<tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>DOB</th>
+    <th>Salary</th>
+</tr>
+
+<tr *ngFor="let items of employees">
+    <td>{{items.id}}</td>
+    <td>{{items.name}}</td>
+    <td>{{items.dob }}</td>
+    <td>{{items.salary}}</td>
+</tr>
+</table>
+
+value: {{value}}
+
+<br>
+
+
+value: {{value | slice: 4 : 6}}
+<br>
+
+<div>
+    Students: {{student | slice :1 : 3 | json}}
+</div>
+
+<br>
+<div>
+    {{TodayDate | date : 'fullDate'}}
+</div>
+
+
+<br><br>
+
+<div>
+    <li *ngFor=" let items of obj|keyvalue">
+        {{items.key}} {{items.value}}
+    </li>
+</div>
+
+<br>
+<br>
+
+
+
+<p>{{data | customPipeMath}}</p>
+
+
+<br>    
+<br>
+
+
+<div *ngFor="let items of employees">
+    {{items.name | TitlePipe: items.gender}}
+</div>

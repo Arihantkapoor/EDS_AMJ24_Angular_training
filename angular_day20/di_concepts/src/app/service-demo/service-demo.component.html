@@ -1,0 +1,6 @@
+<form [formGroup]="userform">
+    <input type="number" formControlName = "userInput">
+    <small class="text-danger" *ngIf="Num?.errors?.notMatched">
+        Number entered is less than or equal to {{Num?.errors?.valueEntered}}
+    </small>
+</form>

@@ -1,0 +1,201 @@
+Lifecycle Hooks
+
+ngOnChanges
+ ngOnInit
+ ngDoCheck
+   ngAfterContentInit
+   ngAfterContentChecked
+    ngAfterViewInit
+   ngAfterViewChecked
+ ngOnDestroy
+
+1. Angular design is like parent and child components, when it starts it renders the root component and then child and then their children so we have the tree structure type of design.
+
+2. When angular loads the component then it checks the Input properties, data binding, etc. so angular works on change detection mechanism. ngOnChanges and ngDoCheck is the part of change detection mechanism.
+
+3. ngOnChanges detects only changes in primitive data types because it does strict comparison by ===
+
+4. ngOnChanges will work on object if object reference changes.
+
+Eg:
+   obj:Customer={"id":10,"name":"ayush"}
+   
+   obj.id = 100 // ngOnChanges will not detect change
+
+   obj={"id":100,"name":"arihant"} // ngOnChanges will work
+
+5. ngDoCheck is the solution because ngDoCheck runs on every change. every time primitive or reference change occur ngDoCheck will work.
+
+6. ngOnInit runs only once in a complete lifecycle and basically here we write some initialisation logic, http get request logic, but @ViewChild, @ContentChild, @ContentChildren, will not be available on ngOnInit.
+
+
+flow of component lifecycle hooks:
+
+constructor -> ngOnChanges -> ngOnInit -> ngDoCheck -> ngAfterContentInit -> ngAfterContentChecked -> ngAfterViewInit -> ngAfterViewChecked -> ngOnDestroy
+
+
+
+ngAfterContentInit
+
+1. Before going to ngAfterContentInit we have to understand about content projection concept
+
+2. This content projection represents by <ng-content>
+
+3. this <ng-content> tag works as a placeholder of the content coming from parent
+
+________________
+
+Important Packages(Modules) in Angular for project Level
+ 
+1. RouterModule -- Defining Route Table here.
+ 
+2. FormsModule -- Defining UI old features of template driven
+ 
+3. ReactiveFormsModule -- It supports model driven architecture.
+ 
+4. BrowserModule --  Provided by angular by default.
+ 
+5. RXJS -- Observable class , ThrowError class , HttpResponse class, CatchError class.
+ 
+6. HttpClientModule -- For calling Restful services supports observable - publisher/subscriber pattern and HttpClient Class(by default Injectable).
+
+_____________________________
+
+
+Content Projection and ngOnChanges, ngDoCheck, ngAfterContentInit, ngAfterContentChecked
+
+import { Component, OnInit, Input } from '@angular/core';
+ 
+@Component({
+  selector: 'app-address-comp',
+  templateUrl: './address-comp.component.html',
+  styleUrls: ['./address-comp.component.css']
+})
+export class AddressCompComponent implements OnInit {
+ 
+  @Input() address:string;
+  constructor() {
+ 
+  }
+  ngOnInit(): void {
+  }
+}
+address-comp.component.ts
+
+
+<p>address-comp works!</p>
+ 
+Address: {{address}}
+address-comp.component.html
+
+<p>child works!</p>
+variable a: {{a}}<br>
+id: {{ob?.id}}<br>
+name: {{ob?.name}}
+ 
+<hr>
+<ng-content></ng-content>
+child.component.html
+
+
+import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck, AfterContentChecked, AfterContentInit, ContentChild, ElementRef, ContentChildren, QueryList } from '@angular/core';
+import { Customer } from '../Models/Customer';
+import { AddressCompComponent } from '../address-comp/address-comp.component';
+ 
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent implements OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit {
+ 
+  @Input() a: number;
+  @Input() ob?: Customer;
+  // @ContentChild('prop') xyz:ElementRef;
+  @ContentChildren('prop') xyz:QueryList<any>;
+  @ContentChild(AddressCompComponent) addr:AddressCompComponent;
+ 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
+ 
+  ngDoCheck(): void {
+    console.log("ngdocheck", this.ob);
+  }
+  ngAfterContentChecked(): void {
+    console.log("after content checked");
+    console.log(this.addr.address);
+  }
+ 
+  ngAfterContentInit(): void {
+    console.log("after content init");
+    // console.log(this.xyz.nativeElement);
+    // console.log(this.xyz);
+    console.log(this.addr.address);
+  }
+ 
+  constructor() {
+    console.log("I am child component");
+  }
+  ngOnInit(): void {
+    console.log("ngOnInit from child component");
+  }
+}
+[Tuesday 1:00 PM] Ayush Verma
+child.component.ts
+[Tuesday 1:01 PM] Ayush Verma
+export interface Customer {
+    id: number;
+    name: string;
+}
+Models/Customer.ts
+
+
+import { Component, ElementRef, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Customer } from '../Models/Customer';
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+ 
+export class ParentComponent implements OnInit {  
+  constructor() {
+    console.log("I am parent component");
+  }
+  ngOnInit(): void {
+    console.log("ngOnInit from parent component")
+  }
+  public obj1:Customer = {
+    id:1,
+    name:"ayush"
+  }
+ 
+  count:number=0;
+  address_counter:string="India";
+  fun(){
+    this.count++;
+    this.obj1.id=this.count++;
+    // this.obj1={
+    //   id:this.count++,
+    //   name:"arihant"
+    // }
+    this.address_counter = this.address_counter + this.count++;
+  }
+}
+parent.component.ts
+ 
+<button (click)="fun()">CLICK</button>
+<app-child [a]="count" [ob]="obj1">
+    <!-- <h1 #prop>This is from parent component content projection</h1>
+    <p #prop>This is from parent component content projection</p> -->
+ 
+ 
+    <!-- this area is called content projection area
+        and this will be placed by ng-content tag in child -->
+ 
+ 
+    <app-address-comp [address]="address_counter"></app-address-comp>
+</app-child>
+
+parent.component.html

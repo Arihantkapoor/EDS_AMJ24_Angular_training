@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\dotnet training\\authidentityapi\\authidentityapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|solutionrelative:authidentityapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\dotnet training\\authidentityapi\\authidentityapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|solutionrelative:authidentityapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|c:\\users\\arihant.kapoor\\onedrive - hcl technologies limited\\documents\\eds_amj24_angular_training\\dotnet training\\authidentityapi\\authidentityapi\\dal\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B77DB50-D9FD-400D-8184-EA904AD7DF1E}|AuthIdentityAPI\\AuthIdentityAPI.csproj|solutionrelative:authidentityapi\\dal\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "AuthIdentityAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "AuthIdentityAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T07:15:56.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\Program.cs",
+              "RelativeDocumentMoniker": "AuthIdentityAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\Program.cs",
+              "RelativeToolTip": "AuthIdentityAPI\\Program.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADMAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T07:01:27.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\DAL\\AuthDBContext.cs",
+              "RelativeDocumentMoniker": "AuthIdentityAPI\\DAL\\AuthDBContext.cs",
+              "ToolTip": "C:\\Users\\arihant.kapoor\\OneDrive - HCL TECHNOLOGIES LIMITED\\Documents\\EDS_AMJ24_Angular_training\\dotnet training\\AuthIdentityAPI\\AuthIdentityAPI\\DAL\\AuthDBContext.cs",
+              "RelativeToolTip": "AuthIdentityAPI\\DAL\\AuthDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T06:57:50.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

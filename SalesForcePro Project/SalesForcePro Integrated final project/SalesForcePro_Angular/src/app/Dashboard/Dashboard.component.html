@@ -1,0 +1,135 @@
+<!-- <p>
+  Dashboard works!
+</p> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<div class="split left">
+  <div class="centered">
+    <!-- <div>
+      <highcharts-chart
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+      style="width: 100%; height: 300px; display: block;">
+
+    </highcharts-chart>
+    </div> -->
+      <img src="assets/img/card1.png" style="height:200px;width:400px">
+      <!-- <button type="button" class="btn btn-primary">Sales generated: 100</button>
+      <button type="button" class="btn btn-success">leads generated: {{TotalLeads}}</button>
+      <button type="button" class="btn btn-info">Total profit: $50</button> -->
+      <div class="row">
+        <div class="column">
+          <div class="card text-white bg-primary mb-3" style="max-width: 10rem">
+            <div class="card-header">Total leads Generated</div>
+            <div class="card-body">
+              <h4 class="card-title">{{TotalLeads}}</h4>
+              <!-- <p class="card-text">{{TotalLeads}}</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card bg-light mb-3" style="max-width: 10rem;">
+            <div class="card-header">Product in demand</div>
+            <div class="card-body">
+              <h4 class="card-title">{{maximumdemand}}</h4>
+              <!-- <p class="card-text">100</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="column">
+          <div class="card bg-light mb-3" style="max-width: 10rem">
+            <div class="card-header">Total Sales</div>
+            <div class="card-body">
+              <h4 class="card-title">{{salesData.length}}</h4>
+              <!-- <p class="card-text">{{TotalLeads}}</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card text-white bg-primary mb-3" style="max-width: 10rem;">
+            <div class="card-header">Revenue</div>
+            <div class="card-body">
+              <h4 class="card-title">{{salesRevenue}}</h4>
+              <!-- <p class="card-text">100</p> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+          
+      
+      <!-- <div class="card text-white bg-success mb-3" >
+        
+        <div class="card-body">
+          <h4 class="card-title">Success card title</h4>
+        </div>
+      </div>
+      <div class="card text-white bg-danger mb-3" >
+        
+        <div class="card-body">
+          <h4 class="card-title">Danger card title</h4>
+        </div>
+      </div>
+      <div class="card text-white bg-warning mb-3" >
+       
+        <div class="card-body">
+          <h4 class="card-title">Warning card title</h4>
+        </div>
+      </div>
+      <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+        
+        <div class="card-body">
+          <h4 class="card-title">Info card title</h4>
+        </div>
+      </div> -->
+    </div>
+    </div>
+
+<div class="split right">
+  <h2>
+      
+    <small class="text-body-secondary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of generated leads</small>
+  </h2>
+  
+  <div class="centered">
+    
+    
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          
+          <th scope="col">Name</th>
+          <th scope="col">email</th>
+          <th scope="col">mobile</th>
+          <th scope="col">Address</th>
+          <th scope="col">Product</th>
+          <th scope="col">Contacted</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active" *ngFor="let item of paginatedItems">
+          
+          <td>{{item.leadName}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.mobile}}</td>
+          <td>{{item.leadAddress}}</td>
+          <td>{{item.interest}}</td>
+          <td>{{item.contacted=="0"?'No':'Yes'}}
+            &nbsp;&nbsp; <a class="cursor" (click)="updatelead(item)"><span class="material-symbols-outlined">
+            edit_document
+            </span></a></td>
+         
+        </tr>
+        </tbody>
+    </table>
+    
+    <div class="pagination-controls">
+      <button (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <button *ngFor="let page of totalPages" (click)="setPage(page)" [class.active]="currentPage === page">{{ page }}</button>
+      <button (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages.length">Next</button>
+    </div>
+  </div>
+</div>

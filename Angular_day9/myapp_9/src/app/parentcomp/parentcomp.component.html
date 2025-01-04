@@ -1,0 +1,26 @@
+<p>parentcomp works!</p>
+
+<br>
+
+Data : {{data}}
+
+
+<br>
+
+
+<app-childcomp (changeEvent)="userdata($event)"></app-childcomp>
+
+
+<!-- <app-childcomp (cEvent) = "userdata($event)"></app-childcomp> -->
+
+<app-childcomp2 #child></app-childcomp2>
+
+
+Data from child2: {{child.data}}
+
+
+<br>
+
+<br>
+<app-childcomp3></app-childcomp3>
+Data from child3: {{obj1?.data}}

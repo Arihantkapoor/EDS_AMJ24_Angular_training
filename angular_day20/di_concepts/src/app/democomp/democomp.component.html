@@ -1,0 +1,13 @@
+<h2>Check whether given number is less than 10 using custom validator Service</h2>
+
+
+<form [formGroup]="userform">
+
+  <label>Enter a number</label>
+  <br>
+  <input type="number" formControlName="num">
+  <br>
+
+  <small class="text-danger" *ngIf="Num?.errors?.notNum">Entered value is not a number </small>
+  <small class="text-danger" *ngIf="Num?.errors?.notValid && Num?.touched">Entered value is less than 10</small>
+</form>

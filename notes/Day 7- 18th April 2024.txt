@@ -1,0 +1,68 @@
+Day 7- 18th April 2024
+
+
+
+one way binding 
+
+view to component binding
+
+  event binding    
+
+
+component to view binding
+
+    interpolation, property binding and Attribute binding
+
+
+
+two way binding -- [(ngModel)] ----  FormsModule ----we have import this module and register with appModule.
+
+
+if i change something in component it should reflect to view and vice versa.
+
+
+Angular event -- ngModelChange ----ngModel - on every single char change it fires
+
+vs 
+
+DOM event--  Change  - it fires on lost focus.
+
+
+
+
+Directives--
+	It give the instructions/directions in DOM to enhance the capabilities of HTML elements
+ 
+	It will change the structure of the HTML elements by structural directives like *ngIf, *ngFor loop, *ngSwitch conditions
+ 
+	We have if conditions loops, switch statements for our coding like ts/c# but what if I want to applyt these on HTML elements
+ 
+	so here Angular come up with structural directives.
+ 
+	Component is also a directive and it gives the directions to any component class by attributes like selector: templateUrl: and styleUrl: etc.
+ 
+	We can create our own custom directives and can use it with any HTML tag attribute.
+ 
+	When I create the custom directives @directive decorator is used
+ 
+	command to create our own directive is -- ng g directive my-directive
+
+
+Ng Template is Angular tag which by default don't render to HTML DOM by this we can hide HTML elements
+ 
+Ng Template works with conditional approach by using template reference variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

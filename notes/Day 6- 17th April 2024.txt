@@ -1,0 +1,84 @@
+Day 6- 17th April 2024
+
+
+Component- decorator -- @
+
+           metadata or attribute
+
+           Selector: <app-root>
+
+           template and templateUrl
+
+           Style and StyleUrl
+
+           Providers
+
+
+life cycle of angular 
+
+main.ts --------> AppModule --------------AppComponent--------------<app-root>----------index.html(browser)
+
+.css  -----
+.html ---- 
+.spec.ts  ----   ng g c customer    --skip-tests
+.ts  -- class /code file
+
+Style.css-  globally - it will impact on all components.
+
+
+root is appcomponent ---------- child customer
+
+
+index.html ----<app-root>-----------html <app-customer>
+
+
+in HTML - external file will get preference
+
+in css - inline will get preference
+
+                                            
+                                     Data binding in Angular.
+
+
+make our UI and component in sync.
+
+One way binding 
+
+              view to component
+
+                                   Event binding 
+
+              component to view 
+
+                                   Interpolation
+
+                                   property binding
+
+                                   Attribute binding
+
+
+
+two -way binding
+
+
+Interpolation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

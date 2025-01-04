@@ -1,0 +1,43 @@
+Day 8- 22 April 2024
+
+1.trackby we use in ngfor
+2.It improves the performance when we have bulk of records
+3.It tracks the already displayed records and only 
+upload new record everytime
+4.ngfor uploads or displayed all the records everytime 
+so not good for performance
+
+
+
+1.We have done with structural directives ngFor,ngSwitch,ngIf .So these directives are updating my DOM elements dynamically.
+ 
+2.Now we have to discuss attribute directive : ngStyle and ngClass
+ 
+3.If we want to bind style dynamically to an HTML element then we can use ngStyle.For static binding we have style attribute with us.
+ 
+4.By the help of ngStyle attribute directive we can apply multiple styles dynamically.
+ 
+5.So we can bind CSS classes dynamically by the help of ngClass attribute directive.
+ 
+6.ngClass attribute can bind multiple CSS classes.
+
+
+Pipes in Angular:
+ 
+	1. pipe is a very important feature of angular to modify your data format or display data 
+	2. We have some inbuilt pipes as below:
+		--->DatePipe (change the format of the date)
+		--->CurrencyPipe(Provides currency symbol etc)
+		--->UpperCase(Converts the content to uppercase)
+		--->LowerCase(Converts the content to lowercase)
+ 
+		---> NumberPipes/DecimalPipes (It helps to decide you fraction of decimal and numbers format)
+		---> PercentPipe (It gives the percentafe of your data and '%' symbol)
+		VVI --> KeyValuePipe(It converts your objects to key and value parameters and it works on sorting also)
+		--->async Pipe (we use this in the case of services and when we are getting data from promise or observable)		
+has context menu
+
+
+
+
+

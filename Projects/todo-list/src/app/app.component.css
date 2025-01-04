@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+h1,
+h2 {
+
+    text-align: center;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+h2 {
+
+    /* color: #808000; */
+    /* font-family: 'Papyrus'; */
+    /* font-family: 'Lucida Handwriting'; */
+    font-size: 80px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+.new-item {
+    text-align: center;
+}
+
+.navbar {
+    background-image: url(.././assets/images/bg.png);
+}
+
+.existing-item {
+    text-align: center;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color:rgb(232 215 79 / 70%);
+    
+    width: 500px;
+    
+    padding: 15px;
+    border-radius: 20px;
+   
+}
+.box button{
+    margin: 5px;
+}
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: inline;
+}

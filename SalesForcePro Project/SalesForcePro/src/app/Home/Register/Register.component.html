@@ -1,0 +1,50 @@
+<img src="assets/img/inhand.png">
+ 
+<div class="form-container">
+  <h2>Register Here</h2>
+  <form class="custom-form" [formGroup]="userForm">
+    <div class="form-group">
+      <label for="firstName">User Name</label>
+      <input type="text" id="firstName" name="firstName" class="form-control" [class.is-invalid]="UserName?.invalid && UserName?.touched" placeholder="Enter your User name" formControlName = "UsersName">
+      <div *ngIf="UserName?.invalid && UserName?.touched">
+        <small class="text-danger" *ngIf="UserName?.errors?.['required']">
+          User Name is required
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control" [class.is-invalid] = "Email?.invalid && Email?.touched" placeholder="Enter your email address" formControlName="Email">
+      <div *ngIf="Email?.invalid && Email?.touched">
+        <small class="text-danger" *ngIf="Email?.errors?.['required']">Email is required</small>
+        <small class="text-danger" *ngIf="Email?.errors?.['email']">Invalid Email</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" class="form-control" [class.is-invalid]="Mobile?.invalid && Mobile?.touched"  placeholder="Enter your phone number" formControlName="Mobile" >
+      <div *ngIf="Mobile?.invalid && Mobile?.touched">
+        <small class="text-danger" *ngIf="Mobile?.errors?.['required']">Mobile Number is required</small>
+        <small class="text-danger" *ngIf="Mobile?.errors?.['pattern']">Mobile Number should be of 10 digits</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Password</label>
+      <input type="password" id="password" name="password" class="form-control" [class.is-invalid]="Password?.invalid && Password?.touched" placeholder="Enter your password" formControlName="UsersPassword" >
+      <div *ngIf="Password?.invalid && Password?.touched">
+        <small class="text-danger" *ngIf="Password?.errors?.['required']">Password is required</small>
+      </div>
+    </div> 
+    <div class="form-group">
+      <label for="phone">Confirm password</label>
+      <input type="password" id="cnfpassword" name="cnfpassword" class="form-control" [class.is-invalid]="ConfirmPassword?.invalid && ConfirmPassword?.touched" placeholder="Confirm your password" formControlName="ConfirmPassword" >
+      <div *ngIf="ConfirmPassword?.invalid && ConfirmPassword?.touched">
+        <small class="text-danger" *ngIf="ConfirmPassword?.errors?.['required']">Confirm Password is required</small>
+        <small class="text-danger" *ngIf="userForm?.errors?.['notmatching'] && ConfirmPassword?.touched">Confirm password and password do not matched</small>
+      </div>
+      <small class="text-danger" *ngIf="userForm?.errors?.['notmatching'] && ConfirmPassword?.touched">Confirm password and password do not matched</small>
+    </div>
+    <button type="submit" class="btn-submit" [disabled]="userForm.invalid" (click)="submitForm(userForm)">Register</button>
+  </form>
+</div>
+ 

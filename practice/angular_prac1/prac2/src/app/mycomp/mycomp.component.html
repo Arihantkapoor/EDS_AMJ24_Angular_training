@@ -1,0 +1,47 @@
+<h1>2 way data-binding through ngModel</h1>
+<input type="text" [(ngModel)] = "txtvalue">
+
+<br>
+<p>{{txtvalue}}</p>
+
+<br>
+<hr>
+
+<h1>2 way data-binding through ngModelChange</h1>
+
+<input type="text" (ngModelChange) = "fun($event)" ngModel>
+
+<br>
+<p>{{txtvalue1}}</p>
+
+
+<br>
+<hr>
+
+<!-- <app-childcomp [data_from_parent]="txtvalue"></app-childcomp> -->
+
+<app-childcomp (childData)="receiveData($event)" #child></app-childcomp>
+
+
+<br>
+<hr>
+
+<h2>Parent receiving child data through @Output decorator</h2>
+
+{{data_received}}
+
+<br>
+
+<hr>
+
+<h2>Parent receiving data using template reference variable</h2>
+
+{{child.childdata1}};
+
+<br>
+<hr>
+
+<h2>Parent receiving data through @ViewChild</h2>
+
+<p>{{child_comp_obj?.data_to_parent}}</p>
+

@@ -1,0 +1,14 @@
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.AssemblyInfoInputs.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.AssemblyInfo.cs
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.csproj.CoreCompileInputs.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\bin\Debug\net8.0\myDelApp.exe
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\bin\Debug\net8.0\myDelApp.deps.json
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\bin\Debug\net8.0\myDelApp.runtimeconfig.json
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\bin\Debug\net8.0\myDelApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\bin\Debug\net8.0\myDelApp.pdb
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\refint\myDelApp.dll
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.pdb
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\myDelApp.genruntimeconfig.cache
+C:\Users\arihant.kapoor\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\EDS_AMJ24_Angular_training\DelegateDemo\myDelApp\obj\Debug\net8.0\ref\myDelApp.dll

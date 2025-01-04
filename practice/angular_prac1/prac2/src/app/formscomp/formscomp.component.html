@@ -1,0 +1,25 @@
+<p>formscomp works!</p>
+
+<div>
+    <h2>Template Driven Forms</h2>
+    <form #forms = "ngForm">
+
+        {{forms.value| json}}
+        <br>
+        <br>
+        <div>
+            <label>Name</label>
+            <input type="text"  name="nameEntered" [(ngModel)]="name" #value="ngModel">
+            <br>
+        </div>
+        <br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="emailEntered" [(ngModel)] = "email">
+        </div>
+    </form>
+
+    {{name}}
+    <br>
+    {{email}}
+</div>

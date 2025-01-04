@@ -1,0 +1,40 @@
+.child1-container{
+    text-align: center;
+    border: white 2px solid;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.red{
+    color: red;
+}
+
+.size20{
+    font-size: 50px;
+}
+
+.primary{
+    color: blue;
+}
+
+.secondary{
+    color: green;
+}
+
+.pink{
+    color: pink;
+}
+
+.big{
+    font-size: 30px;
+}
+
+.small{
+    font-size: 20px;
+}
+.italic{
+    font-style: italic;
+}
